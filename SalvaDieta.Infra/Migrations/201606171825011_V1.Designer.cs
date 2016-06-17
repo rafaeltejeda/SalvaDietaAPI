@@ -13,7 +13,7 @@ namespace SalvaDieta.Infra.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201606170127427_V1"; }
+            get { return "201606171825011_V1"; }
         }
         
         string IMigrationMetadata.Source
