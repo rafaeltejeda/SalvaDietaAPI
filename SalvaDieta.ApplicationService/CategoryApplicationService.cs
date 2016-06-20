@@ -22,7 +22,7 @@ namespace SalvaDieta.ApplicationService
 
         public Category Create(CreateCategoryCommand command)
         {
-            var category = new Category(command.Title);
+            var category = new Category(command.Title, command.Decription, command.Icon);
             category.Register();
             _repository.Create(category);
 
@@ -35,7 +35,7 @@ namespace SalvaDieta.ApplicationService
         public Category Update(UpdateCategoryCommand command)
         {
             var category = _repository.Get(command.Id);
-            category.UpdateTitle(command.Title);
+            category.Update(command.Title, command.Decription, command.Icon);
             _repository.Update(category);
 
             if (Commit())

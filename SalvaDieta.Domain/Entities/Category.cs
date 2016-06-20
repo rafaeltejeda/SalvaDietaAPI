@@ -7,14 +7,17 @@ namespace SalvaDieta.Domain.Entities
     {
         protected Category() { }
 
-        public Category(string title)
+        public Category(string title, string decription, string icon)
         {
             this.Title = title;
+            this.Decription = decription;
+            this.Icon = Icon;
             Product = new List<Product>();
         }
 
         public int Id { get; private set; }
         public string Title { get; private set; }
+        public string Decription { get; private set; }
         public string Icon { get; private set; }
 
         public ICollection<Product> Product { get; set; }
@@ -25,12 +28,14 @@ namespace SalvaDieta.Domain.Entities
                 return;
         }
 
-        public void UpdateTitle(string title)
+        public void Update(string title, string decription, string icon)
         {
-            if (!this.EditCategoryScopeIsValid(title))
+            if (!this.EditCategoryScopeIsValid(title, decription, icon))
                 return;
 
             this.Title = title;
+            this.Decription = decription;
+            this.Icon = icon;
         }
     }
 }

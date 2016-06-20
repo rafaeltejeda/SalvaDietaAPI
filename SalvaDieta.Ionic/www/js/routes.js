@@ -10,8 +10,8 @@ angular.module('app.routes', [])
     
   
 
-      .state('menu.home', {
-    url: '/page1en',
+ .state('menu.home', {
+    url: '/home',
     views: {
       'side-menu21': {
         templateUrl: 'templates/home.html',
@@ -38,14 +38,14 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-  .state('localizaO', {
+  .state('menu.localizao', {
     url: '/page4',
     templateUrl: 'templates/localizaO.html',
     controller: 'localizaOCtrl'
   })
 
   .state('menu.categorias', {
-    url: '/page5',
+    url: '/categorias',
     views: {
       'side-menu21': {
         templateUrl: 'templates/categorias.html',
@@ -107,7 +107,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.cesta', {
-    url: '/page10',
+    url: '/cesta',
     views: {
       'side-menu21': {
         templateUrl: 'templates/cesta.html',
@@ -146,26 +146,30 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('histRico', {
-    url: '/page15',
-    templateUrl: 'templates/histRico.html',
+  .state('menu.historico', {
+    url: '/historico',
+    templateUrl: 'templates/historico.html',
     controller: 'histRicoCtrl'
   })
 
-  .state('menu.configuraEs', {
-    url: '/page16',
+  .state('menu.configuracoes', {
+    url: '/configuracoes',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/configuraEs.html',
+        templateUrl: 'templates/configuracoes.html',
         controller: 'configuraEsCtrl'
       }
     }
   })
 
-  .state('sobre', {
-    url: '/page17',
-    templateUrl: 'templates/sobre.html',
-    controller: 'sobreCtrl'
+  .state('menu.sobre', {
+    url: '/sobre',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/sobre.html',
+        controller: 'sobreCtrl'
+      }
+    }
   })
 
 $urlRouterProvider.otherwise('/side-menu21/page1en')

@@ -20,8 +20,8 @@ namespace SalvaDieta.Infra.Pesistence.Map
                 .HasMaxLength(60)
                 .IsRequired();
 
-            Property(x => x.Icon)
-                .HasMaxLength(60)
+            Property(x => x.Decription)
+                .HasMaxLength(500)
                 .IsRequired();
         }
     }
