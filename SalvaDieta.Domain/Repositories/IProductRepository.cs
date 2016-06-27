@@ -15,5 +15,6 @@ namespace SalvaDieta.Domain.Repositories
         List<Product> Get(int skip, int take);
         List<Product> GetProductsInStock();
         List<Product> GetProductsOutOfStock();
+        List<Product> GetByCategory(int id);
     }
 }

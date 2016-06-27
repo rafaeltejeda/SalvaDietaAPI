@@ -41,7 +41,7 @@ namespace SalvaDieta.ApplicationService
             return null;
         }
 
-        public Product UpdateBasicInformation(UpdateProductCommand command)
+        public Product Update(UpdateProductCommand command)
         {
             var product = _repository.Get(command.Id);
             product.UpdateInfo(command.Title, command.Description, command.Weight, command.Price, command.QuantityOnHand, command.CategoryId, command.Image);
@@ -73,5 +73,9 @@ namespace SalvaDieta.ApplicationService
             return _repository.GetProductsInStock();
         }
 
+        public List<Product> GetByCategory(int id)
+        {
+            return _repository.GetByCategory(id);
+        }
     }
 }

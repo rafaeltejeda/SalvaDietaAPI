@@ -1,0 +1,24 @@
+<ion-view title="Categorias" id="page5" style="background-color:#78D864;" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div class="">
+            <img src="img/t2XwRxjfTCWeEWLIVHjj_icon.png" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="card">
+             <div class="item item-text-wrap">
+                  <ion-list id="categorias-list17">
+                        <label class="item item-input">
+                            <i class="icon ion-search placeholder-icon"></i>
+                            <input type="search" ng-model="filter" placeholder="Pesquisar por produtos">
+                        </label>
+                        <ion-item class="item-thumbnail-left" 
+                                  ng-repeat="category in categories | filter: filter"
+                                  ng-href="#/side-menu21/products/{{category.id}}">
+                            <img ng-src="{{category.icon}}">
+                            <h2>{{category.title}}</h2>
+                            <p style="white-space:normal;">{{category.decription}}</p>
+                        </ion-item>                        
+                  </ion-list>
+             </div>
+        </div>      
+    </ion-content>
+</ion-view>

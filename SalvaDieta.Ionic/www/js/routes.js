@@ -44,64 +44,22 @@ angular.module('app.routes', [])
     controller: 'localizaOCtrl'
   })
 
-  .state('menu.categorias', {
-    url: '/categorias',
+  .state('menu.category', {
+    url: '/category',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/categorias.html',
-        controller: 'categoriasCtrl'
+        templateUrl: 'templates/category.html',
+        controller: 'categoryCtrl'
       }
     }
-  })
+  })  
 
-  .state('menu.categoriaFITNESS', {
-    url: '/page6',
+  .state('menu.productsbycategory', {
+    url: '/products/:id',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/categoriaFITNESS.html',
-        controller: 'categoriaFITNESSCtrl'
-      }
-    }
-  })
-
-  .state('menu.categoriaVEGANA', {
-    url: '/page12',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/categoriaVEGANA.html',
-        controller: 'categoriaVEGANACtrl'
-      }
-    }
-  })
-
-  .state('categoriaSEMGLUTEN', {
-    url: '/page18',
-    templateUrl: 'templates/categoriaSEMGLUTEN.html',
-    controller: 'categoriaSEMGLUTENCtrl'
-  })
-
-  .state('categoriaSEMLACTOSE', {
-    url: '/page19',
-    templateUrl: 'templates/categoriaSEMLACTOSE.html',
-    controller: 'categoriaSEMLACTOSECtrl'
-  })
-
-  .state('menu.categoriaLIVRE', {
-    url: '/page13',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/categoriaLIVRE.html',
-        controller: 'categoriaLIVRECtrl'
-      }
-    }
-  })
-
-  .state('menu.PaginaDoProduto', {
-    url: '/page11',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/PaginaDoProduto.html',
-        controller: 'pGinaDoProdutoCtrl'
+        templateUrl: 'templates/products.html',
+        controller: 'ProductCtrl'
       }
     }
   })
@@ -172,8 +130,6 @@ angular.module('app.routes', [])
     }
   })
 
-$urlRouterProvider.otherwise('/side-menu21/page1en')
-
-  
+$urlRouterProvider.otherwise('/side-menu21/home')  
 
 });

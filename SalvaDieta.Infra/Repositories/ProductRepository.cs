@@ -21,15 +21,15 @@ namespace SalvaDieta.Infra.Repositories
             _context.Products.Add(product);
         }
 
-        public void Delete(Product product)
-        {
-            _context.Products.Remove(product);
-        }
-
         public void Update(Product product)
         {
             _context.Entry<Product>(product).State = System.Data.Entity.EntityState.Modified;
         }
+
+        public void Delete(Product product)
+        {
+            _context.Products.Remove(product);
+        }        
 
         public List<Product> Get()
         {
@@ -54,6 +54,11 @@ namespace SalvaDieta.Infra.Repositories
         public List<Product> GetProductsOutOfStock()
         {
             return _context.Products.Where(ProductSpecs.GetProductsOutOfStock()).ToList();
+        }
+
+        public List<Product> GetByCategory(int id)
+        {
+            return _context.Products.Where(x => x.CategoryId == id).ToList();
         }
     }
 }

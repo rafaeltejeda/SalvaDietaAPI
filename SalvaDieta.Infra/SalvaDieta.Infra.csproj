@@ -49,17 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201606171825011_V1.cs" />
-    <Compile Include="Migrations\201606171825011_V1.Designer.cs">
-      <DependentUpon>201606171825011_V1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606171918064_V1.1.cs" />
-    <Compile Include="Migrations\201606171918064_V1.1.Designer.cs">
-      <DependentUpon>201606171918064_V1.1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606201303308_Add_Decription_Category.cs" />
-    <Compile Include="Migrations\201606201303308_Add_Decription_Category.Designer.cs">
-      <DependentUpon>201606201303308_Add_Decription_Category.cs</DependentUpon>
+    <Compile Include="Migrations\201606241836556_v1.cs" />
+    <Compile Include="Migrations\201606241836556_v1.Designer.cs">
+      <DependentUpon>201606241836556_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pesistence\DataContexts\SalvaDietaDataContext.cs" />
@@ -89,14 +81,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201606171825011_V1.resx">
-      <DependentUpon>201606171825011_V1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606171918064_V1.1.resx">
-      <DependentUpon>201606171918064_V1.1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606201303308_Add_Decription_Category.resx">
-      <DependentUpon>201606201303308_Add_Decription_Category.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606241836556_v1.resx">
+      <DependentUpon>201606241836556_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

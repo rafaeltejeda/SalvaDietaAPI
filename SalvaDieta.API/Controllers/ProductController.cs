@@ -27,6 +27,23 @@ namespace SalvaDieta.API.Controllers
 
         [HttpGet]
         //[Authorize]
+        [Route("api/product/{id}")]
+        public Task<HttpResponseMessage> Get(int id)
+        {
+            var products = _service.Get(id);
+            return CreateResponse(HttpStatusCode.OK, products);
+        }
+
+        [HttpGet]
+        [Route("api/products/category/{id:int}")]
+        public Task<HttpResponseMessage> GetByCategory(int id)
+        {
+            var result = _service.GetByCategory(id);
+            return CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        [HttpGet]
+        //[Authorize]
         [Route("api/products/{skip:int:min(0)}/{take:int:min(1)}")]
         public Task<HttpResponseMessage> GetByRange(int skip, int take)
         {
@@ -78,7 +95,7 @@ namespace SalvaDieta.API.Controllers
                 quantityOnHand: (int)body.quantityOnHand
             );
 
-            var product = _service.UpdateBasicInformation(command);
+            var product = _service.Update(command);
             return CreateResponse(HttpStatusCode.OK, product);
         }
 

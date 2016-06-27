@@ -27,7 +27,7 @@ namespace SalvaDieta.Infra.Pesistence.Map
 
             Property(x => x.Image);
 
-            HasRequired(x => x.Category);
+            HasRequired(x => x.Category).WithMany(x => x.Products);
         }
     }
 }

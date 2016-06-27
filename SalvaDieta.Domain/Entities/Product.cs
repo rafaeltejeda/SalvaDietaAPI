@@ -1,4 +1,5 @@
 ﻿using SalvaDieta.Domain.Scopes;
+using System.Collections.Generic;
 
 namespace SalvaDieta.Domain.Entities
 {
@@ -10,16 +11,16 @@ namespace SalvaDieta.Domain.Entities
                string description, 
                string weight, 
                decimal price, 
-               int quantityOnHand, 
-               int category, 
+               int quantityOnHand,
+               int category,
                string image = "")
         {
             this.Title = title;
             this.Description = description;
             this.Weight = weight;
             this.Price = price;
-            this.QuantityOnHand = quantityOnHand;
-            this.CategoryId = category;
+            this.QuantityOnHand = quantityOnHand; 
+            this.CategoryId = category;     
             this.Image = image;
         }
 

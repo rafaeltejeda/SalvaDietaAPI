@@ -7,12 +7,14 @@ namespace SalvaDieta.Domain.Entities
     {
         protected Category() { }
 
-        public Category(string title, string decription, string icon)
+        public Category(string title, 
+                        string decription, 
+                        string icon)
         {
             this.Title = title;
             this.Decription = decription;
-            this.Icon = Icon;
-            Product = new List<Product>();
+            this.Icon = Icon;    
+            this.Products = new List<Product>();
         }
 
         public int Id { get; private set; }
@@ -20,7 +22,7 @@ namespace SalvaDieta.Domain.Entities
         public string Decription { get; private set; }
         public string Icon { get; private set; }
 
-        public ICollection<Product> Product { get; set; }
+        public ICollection<Product> Products { get; set; }
 
         public void Register()
         {
