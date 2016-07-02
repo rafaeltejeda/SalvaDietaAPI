@@ -18,13 +18,11 @@ namespace SalvaDieta.Domain.Scopes
             );
         }
 
-        public static bool EditCategoryScopeIsValid(this Category category, string title, string decription, string icon)
+        public static bool EditCategoryScopeIsValid(this Category category, string title)
         {
             return AssertionConcern.IsSatisfiedBy
             (
-                AssertionConcern.AssertNotEmpty(title, "O título é obrigatório"),
-                AssertionConcern.AssertNotEmpty(category.Description, "A Descrição é obrigatório")
-                
+                AssertionConcern.AssertNotEmpty(title, "O título é obrigatório")                
             );
         }
     }

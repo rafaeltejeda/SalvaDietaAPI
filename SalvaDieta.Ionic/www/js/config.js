@@ -6,8 +6,8 @@
         'CURR_ENV': 'dev',
         'AUTH_TOKEN': 'netzsystem-token',
         'AUTH_USER': 'netzsystem-user',
-        'SERVICE_URL': 'http://localhost:55568/'
-        //'SERVICE_URL': 'http://rafaeltejeda-001-site1.ctempurl.com/'        
+        //'SERVICE_URL': 'http://localhost:55568/'
+        'SERVICE_URL': 'http://salva-dieta-api.azurewebsites.net/'        
     });
 
     angular.module('app').run(function ($rootScope, $location, SETTINGS) {

@@ -32,7 +32,7 @@ namespace SalvaDieta.Domain.Entities
 
         public void Update(string title, string description, string icon)
         {
-            if (!this.EditCategoryScopeIsValid(title, description, icon))
+            if (!this.EditCategoryScopeIsValid(title))
                 return;
 
             this.Title = title;
