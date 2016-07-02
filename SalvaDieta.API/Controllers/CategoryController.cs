@@ -50,7 +50,7 @@ namespace SalvaDieta.API.Controllers
         {
             var command = new CreateCategoryCommand(
                 title: (string)body.title,
-                decription: (string)body.decription,
+                description: (string)body.description,
                 icon: (string)body.icon
             );
 
@@ -66,7 +66,7 @@ namespace SalvaDieta.API.Controllers
             var command = new UpdateCategoryCommand(
                 id: id,
                 title: (string)body.title,
-                decription: (string)body.decription,
+                description: (string)body.description,
                 icon: (string)body.icon
             );
 

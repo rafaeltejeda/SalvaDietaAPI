@@ -14,9 +14,7 @@ namespace SalvaDieta.Domain.Scopes
         {
             return AssertionConcern.IsSatisfiedBy
             (
-                AssertionConcern.AssertNotEmpty(category.Title, "O título é obrigatório"),
-                AssertionConcern.AssertNotEmpty(category.Decription, "A Descrição é obrigatório"),
-                AssertionConcern.AssertNotEmpty(category.Icon, "A Descrição é obrigatório")
+                AssertionConcern.AssertNotEmpty(category.Title, "O título é obrigatório")                
             );
         }
 
@@ -25,8 +23,8 @@ namespace SalvaDieta.Domain.Scopes
             return AssertionConcern.IsSatisfiedBy
             (
                 AssertionConcern.AssertNotEmpty(title, "O título é obrigatório"),
-                AssertionConcern.AssertNotEmpty(category.Decription, "A Descrição é obrigatório"),
-                AssertionConcern.AssertNotEmpty(category.Icon, "A Descrição é obrigatório")
+                AssertionConcern.AssertNotEmpty(category.Description, "A Descrição é obrigatório")
+                
             );
         }
     }

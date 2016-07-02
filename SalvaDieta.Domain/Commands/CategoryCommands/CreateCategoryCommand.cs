@@ -8,15 +8,15 @@ namespace SalvaDieta.Domain.Commands.CategoryCommands
 {
     public class CreateCategoryCommand
     {
-        public CreateCategoryCommand(string title, string decription, string icon)
+        public CreateCategoryCommand(string title, string description, string icon)
         {
             this.Title = title;
-            this.Decription = decription;
+            this.Description = description;
             this.Icon = icon;
         }
 
         public string Title { get; private set; }
-        public string Decription { get; private set; }
+        public string Description { get; private set; }
         public string Icon { get; private set; }
     }
 }
