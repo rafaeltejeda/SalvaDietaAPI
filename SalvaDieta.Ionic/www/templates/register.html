@@ -1,0 +1,28 @@
+<ion-view title="Cadastro do Cliente" id="page3" style="background-color:#78D864;" class=" ">
+    <ion-content padding="true" scroll="false" class="has-header">
+        <div class="">
+            <center><img src="img/salvadieta.svg" width="320" /></center>
+        </div>
+        <form id="register" name="register" class="list">
+        <div class="card">        
+            <label class="item item-input " id="cadastroDoCliente-input1">
+                <input type="text" ng-model="register.nome" placeholder="Nome">
+            </label>
+            <label class="item item-input " id="cadastroDoCliente-input2">
+                <input type="tel" ng-model="register.cellPhone" placeholder="Telefone">
+            </label>
+            <label class="item item-input " id="cadastroDoCliente-input18">
+                <input type="email" ng-model="register.email" placeholder="E-mail">
+            </label>
+            <label class="item item-input " id="cadastroDoCliente-input3">
+                <input type="password" id="password" name="password" ng-model="register.password" ng-minlength="3" ng-maxlength="20" required placeholder="">               
+            </label>        
+
+            <label class="item item-input " id="cadastroDoCliente-input4">
+                <input type="password" id="passwordConfirmation" name="passwordConfirmation" ng-model="register.passwordConfirmation" pw-check="password" ng-minlength="3" ng-maxlength="20" required placeholder="">             
+            </label>   
+        </div>
+        <button id="register-bt" ng-click="registerUser()" class=" button button-stable button-block ">Cadastrar</button>
+        </form>
+    </ion-content>
+</ion-view>

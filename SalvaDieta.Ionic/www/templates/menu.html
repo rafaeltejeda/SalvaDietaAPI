@@ -3,14 +3,14 @@
         <ion-nav-bar class="bar-stable">
             <ion-nav-back-button></ion-nav-back-button>
             <ion-nav-buttons side="left">
-                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+                <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()" ng-hide="$exposeAside.active"></button>
             </ion-nav-buttons>
         </ion-nav-bar>
         <ion-nav-view name="side-menu21"></ion-nav-view>
     </ion-side-menu-content>
-    <ion-side-menu side="left" id="side-menu21" style="background-color:#21382F;">
+    <ion-side-menu side="left" id="side-menu21" expose-aside-when="large" style="background-color:#21382F;">
         <ion-header-bar class="bar-stable">
-            <div class="title">Menu</div>
+            <div class="title">Salva Dieta</div>
         </ion-header-bar>
         <ion-content padding="true" class="side-menu-left has-header">
             <div class="">
@@ -28,8 +28,7 @@
                 <ion-item class="balanced  menu-item" id="menu-list-item6" ui-sref="menu.configuracoes" menu-close="">Configurações</ion-item>
                 <ion-item class="balanced  menu-item" id="menu-list-item5" ui-sref="menu.sobre" menu-close="">Sobre</ion-item>
                 <ion-item class="balanced  menu-item" id="menu-list-item2" ui-sref="menu.login" menu-close="">Sair</ion-item>
-            </ion-list>
-            <ion-list id="menu-list1" class=" "></ion-list>
+            </ion-list>            
         </ion-content>
     </ion-side-menu>
 </ion-side-menus>

@@ -1,16 +1,18 @@
 angular.module('app.controllers', [])
-  
+
+.controller('menuCtrl', function($scope, $ionicSideMenuDelegate) {
+   $scope.toggleLeft = function() {
+       $ionicSideMenuDelegate.toggleLeft();
+   };
+})  
+
 .controller('homeCtrl', function($scope) {
 
 })
    
 .controller('loginCtrl', function($scope) {
 
-})
-   
-.controller('cadastroDoClienteCtrl', function($scope) {
-
-})
+})   
       
 .controller('localizaOCtrl', function($scope) {
 

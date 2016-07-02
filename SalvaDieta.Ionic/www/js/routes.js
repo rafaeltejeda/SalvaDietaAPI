@@ -21,25 +21,26 @@ angular.module('app.routes', [])
   })
 
   .state('login', {
-    url: '/page2',
+    url: '/login',
     templateUrl: 'templates/login.html',
     controller: 'loginCtrl'
   })
 
-  .state('cadastroDoCliente', {
-    url: '/page3',
-    templateUrl: 'templates/cadastroDoCliente.html',
-    controller: 'cadastroDoClienteCtrl'
+  .state('register', {
+    url: '/register',
+    templateUrl: 'templates/register.html',
+    controller: 'registerCtrl'
   })
 
   .state('menu', {
     url: '/side-menu21',
-    templateUrl: 'templates/menu.html',
+    templateUrl: 'templates/menu.html',    
+    controller: 'menuCtrl',
     abstract:true
   })
 
-  .state('menu.localizao', {
-    url: '/page4',
+  .state('menu.localizacao', {
+    url: '/localizacao',
     templateUrl: 'templates/localizaO.html',
     controller: 'localizaOCtrl'
   })
@@ -64,18 +65,28 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.product', {
+    url: '/product/:id',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/product.html',
+        controller: 'ProductCtrl'
+      }
+    }
+  })
+
   .state('menu.cesta', {
     url: '/cesta',
     views: {
       'side-menu21': {
         templateUrl: 'templates/cesta.html',
-        controller: 'cestaCtrl'
+        controller: 'cartCtrl'
       }
     }
   })
 
   .state('menu.agendamentoDoPedido', {
-    url: '/page8',
+    url: '/agendamentoDoPedido',
     views: {
       'side-menu21': {
         templateUrl: 'templates/agendamentoDoPedido.html',

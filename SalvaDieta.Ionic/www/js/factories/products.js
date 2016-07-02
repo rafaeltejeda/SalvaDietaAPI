@@ -7,11 +7,16 @@
     function productsFactory($rootScope, $http, SETTINGS) {
         return {
             get: get,
+            getById: getById,
             getByCategory: getByCategory
         }
 
         function get() {
             return $http.get(SETTINGS.SERVICE_URL + 'api/products', $rootScope.header);
+        }
+
+        function getById(id) {
+            return $http.get(SETTINGS.SERVICE_URL + 'api/product/' + id, $rootScope.header);
         }
 
         function getByCategory(id) {

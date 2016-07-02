@@ -4,6 +4,7 @@ using SalvaDieta.Domain.Specs;
 using SalvaDieta.Infra.Persistence.DataContexts;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 
 namespace SalvaDieta.Infra.Repositories
 {
@@ -33,7 +34,7 @@ namespace SalvaDieta.Infra.Repositories
 
         public List<Product> Get()
         {
-            return _context.Products.ToList();
+            return _context.Products.Include(x => x.Category).ToList();
         }
 
         public Product Get(int id)
@@ -48,7 +49,7 @@ namespace SalvaDieta.Infra.Repositories
 
         public List<Product> GetProductsInStock()
         {
-            return _context.Products.Where(ProductSpecs.GetProductsInStock()).ToList();
+            return _context.Products.Include(x => x.Category).Where(ProductSpecs.GetProductsInStock()).ToList();
         }
 
         public List<Product> GetProductsOutOfStock()

@@ -1,23 +1,31 @@
-<ion-view title="Produtos" id="page5" style="background-color:#78D864;" class=" ">
+<ion-view title="Produto" id="page5" style="background-color:#78D864;">
     <ion-content padding="true" class="has-header">
-        <div class="">
-            <img src="img/t2XwRxjfTCWeEWLIVHjj_icon.png" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        <div>
+            <center><img src="img/salvadieta2.svg" width="320"></center>
         </div>
         <div class="card">
              <div class="item item-text-wrap">
+                  
                   <ion-list id="categorias-list17">
                         <label class="item item-input">
                             <i class="icon ion-search placeholder-icon"></i>
                             <input type="search" ng-model="filter" placeholder="Pesquisar por produtos">
                         </label>
+
+                        <div ng-show="ProductsCategory.items.length === 0">The cart is empty</div>
+                        
                         <ion-item class="item-thumbnail-left" 
                                   ng-repeat="product in ProductsCategory | filter: filter"
-                                  ng-href="#/side-menu21/products/{{product.id}}">
-                            <img ng-src="{{product.image}}">
-                            <h2>{{product.title}}</h2>
-                            <p style="white-space:normal;">{{product.description}}</p>
+                                  ng-href="#/side-menu21/product/{{product.id}}">
+                             <img ng-src="{{product.image}}">
+                             <h2>{{product.title}}</h2>
+                             <p style="white-space:normal;">{{product.description}}</p>
+                            
                         </ion-item>                        
                   </ion-list>
+                  <div class="padding" ng-show="!ProductsCategory.length">
+                       <center>Sem produtos para essa categoria no momento.</center>
+                  </div>
              </div>
         </div>      
     </ion-content>

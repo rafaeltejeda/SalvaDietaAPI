@@ -74,7 +74,6 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.API\bin\SalvaDieta.In
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.API\obj\Debug\SalvaDieta.API.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.API\obj\Debug\SalvaDieta.API.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.API\obj\Debug\SalvaDieta.API.pdb
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\obj\Debug\SalvaDieta.API.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\bin\ApplicationInsights.config
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\bin\roslyn\csc.exe
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -148,5 +147,6 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\bin\System.Net
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\bin\System.Web.Http.xml
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\bin\System.Web.Http.Owin.xml
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\bin\SalvaDieta.Infra.pdb
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\obj\Debug\SalvaDieta.API.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\obj\Debug\SalvaDieta.API.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.API\obj\Debug\SalvaDieta.API.pdb
