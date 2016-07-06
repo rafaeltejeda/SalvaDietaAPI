@@ -1,7 +1,7 @@
 <ion-view title="Carrinho de compra" id="page10" style="background-color:#78D864;" class=" ">
     <ion-content padding="true" class="has-header">
         <div class="">
-             <center><img src="img/salvadieta.svg" width="320" /></center>
+             <center><img src="img/salvadieta.svg" width="200" /></center>
         </div>
         <div class="card">
             
@@ -10,11 +10,11 @@
                   can-swipe="true">
            
              <ion-item class="item-thumbnail-left"  
-                       ng-repeat="product in products track by $index">
+                       ng-repeat="product in products">
 
                   <img ng-src="{{product.image}}">
                   <h2>{{product.title}}</h2>
-                  <p>{{product.weight}} Kg | R${{product.price}}</p>
+                  <p>{{product.weight}} kg | R${{product.price}}</p>
                   <p>{{product.description}}</p>
                   <ion-option-button class="button-calm"
                                      ng-href="#/side-menu21/product/{{product.id}}">
@@ -33,7 +33,7 @@
               <center>Sem produtos no carrinho.</center>
          </div>
         </div>
-        <a ui-sref="menu.category" id="cesta-button8" class=" button button-stable  button-block ">Continuar Comprando</a>
+        <a ui-sref="menu.category" class=" button button-stable button-block ">Continuar Comprando</a>
         <a ui-sref="menu.agendamentoDoPedido" id="cesta-button13" class=" button button-balanced button-large button-block ">Finalizar</a>
     </ion-content>
 </ion-view>

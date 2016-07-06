@@ -1,7 +1,7 @@
-<ion-view title="Categorias" id="page5" style="background-color:#78D864;" class=" ">
+<ion-view title="Selecione uma categoria" id="page5" style="background-color:#78D864;" class=" ">
     <ion-content padding="true" class="has-header">
         <div class="">
-            <center><img src="img/salvadieta2.svg" width="320"></center>
+            <center><img src="img/salvadieta2.svg" width="180"></center>
         </div>
         <div class="card">
              <div class="item item-text-wrap">
@@ -9,7 +9,7 @@
                   <ion-list id="categorias-list17">
                         <label class="item item-input">
                             <i class="icon ion-search placeholder-icon"></i>
-                            <input type="search" ng-model="filter" placeholder="Pesquisar por produtos">
+                            <input type="search" ng-model="filter" placeholder="Pesquisar por categoria">
                         </label>                       
                         
                         <ion-item class="item-thumbnail-left" 
@@ -17,7 +17,7 @@
                                   ng-href="#/side-menu21/products/{{category.id}}">
                             <img ng-src="{{category.icon}}">
                             <h2>{{category.title}}</h2>
-                            <p style="white-space:normal;">{{category.decription}}</p>
+                            <p style="white-space:normal;">{{category.description}}</p>
                             
                         </ion-item>                        
                   </ion-list>
