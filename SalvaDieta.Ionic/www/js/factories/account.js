@@ -5,6 +5,9 @@
     accountFactory.$inject = ['$http', 'SETTINGS'];
 
     function accountFactory($http, SETTINGS) {
+        
+        debugger;
+        
         return {
             login: login
         };

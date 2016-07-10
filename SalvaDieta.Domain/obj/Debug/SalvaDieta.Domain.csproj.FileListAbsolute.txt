@@ -5,10 +5,3 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.Domain\bin\Debug\Salv
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.Domain\obj\Debug\SalvaDieta.Domain.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.Domain\obj\Debug\SalvaDieta.Domain.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.Domain\obj\Debug\SalvaDieta.Domain.pdb
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Domain\bin\Debug\SalvaDieta.Domain.dll
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Domain\bin\Debug\SalvaDieta.Domain.pdb
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Domain\bin\Debug\SalvaDieta.SharedKernel.dll
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Domain\bin\Debug\SalvaDieta.SharedKernel.pdb
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Domain\obj\Debug\SalvaDieta.Domain.csprojResolveAssemblyReference.cache
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Domain\obj\Debug\SalvaDieta.Domain.dll
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Domain\obj\Debug\SalvaDieta.Domain.pdb
