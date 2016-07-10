@@ -18,7 +18,7 @@ namespace SalvaDieta.API.Controllers
 
         [HttpGet]
         [Route("api/users")]
-        //[Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin")]
         public Task<HttpResponseMessage> Get()
         {
             var users = _service.Get();

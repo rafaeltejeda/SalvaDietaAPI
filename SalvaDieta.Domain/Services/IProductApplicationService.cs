@@ -7,11 +7,13 @@ namespace SalvaDieta.Domain.Services
     public interface IProductApplicationService
     {
         List<Product> Get();
-        List<Product> GetOutOfStock();
-        List<Product> Get(int skip, int take);        
+        List<Product> Get(int skip, int take);
+
+        List<Product> GetOutOfStock();               
         List<Product> GetByCategory(int id);
 
         Product Get(int id);
+
         Product Create(CreateProductCommand command);
         Product Update(UpdateProductCommand command);
         Product Delete(int id);

@@ -30,17 +30,6 @@ namespace SalvaDieta.ApplicationService
             return null;
         }
 
-        public Product Delete(int id)
-        {
-            var product = _repository.Get(id);
-            _repository.Delete(product);
-
-            if (Commit())
-                return product;
-
-            return null;
-        }
-
         public Product Update(UpdateProductCommand command)
         {
             var product = _repository.Get(command.Id);
@@ -52,6 +41,17 @@ namespace SalvaDieta.ApplicationService
 
             return null;
         }
+
+        public Product Delete(int id)
+        {
+            var product = _repository.Get(id);
+            _repository.Delete(product);
+
+            if (Commit())
+                return product;
+
+            return null;
+        }       
 
         public Product Get(int id)
         {

@@ -44,7 +44,7 @@ angular.module('app.services', [])
             }
 
             products = products.filter(function (products){
-                return products.id !==product.id;
+                return products.$id !==product.$id;
             });
 
             localStorage.setItem('products', JSON.stringify(products));

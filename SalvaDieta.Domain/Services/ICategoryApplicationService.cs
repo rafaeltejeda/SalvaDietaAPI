@@ -10,6 +10,7 @@ namespace SalvaDieta.Domain.Services
         List<Category> Get(int skip, int take);
 
         Category Get(int id);
+
         Category Create(CreateCategoryCommand command);
         Category Update(UpdateCategoryCommand command);
         Category Delete(int id);

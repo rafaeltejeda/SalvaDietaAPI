@@ -126,7 +126,7 @@ angular.module('app.routes', [])
     views: {
       'side-menu21': {
         templateUrl: 'templates/configuracoes.html',
-        controller: 'configuraEsCtrl'
+        controller: 'configCtrl'
       }
     }
   })

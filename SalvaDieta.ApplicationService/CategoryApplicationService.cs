@@ -3,11 +3,7 @@ using SalvaDieta.Domain.Entities;
 using SalvaDieta.Domain.Repositories;
 using SalvaDieta.Domain.Services;
 using SalvaDieta.Infra;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SalvaDieta.ApplicationService
 {
