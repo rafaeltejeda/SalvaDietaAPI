@@ -2,3 +2,9 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.SharedKernel\bin\Debu
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.SharedKernel\bin\Debug\SalvaDieta.SharedKernel.pdb
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.SharedKernel\obj\Debug\SalvaDieta.SharedKernel.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.SharedKernel\obj\Debug\SalvaDieta.SharedKernel.pdb
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.SharedKernel\bin\Debug\SalvaDieta.SharedKernel.dll
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.SharedKernel\bin\Debug\SalvaDieta.SharedKernel.pdb
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.SharedKernel\obj\Debug\SalvaDieta.SharedKernel.Resourses.EmailTemplates.resources
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.SharedKernel\obj\Debug\SalvaDieta.SharedKernel.csproj.GenerateResource.Cache
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.SharedKernel\obj\Debug\SalvaDieta.SharedKernel.dll
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.SharedKernel\obj\Debug\SalvaDieta.SharedKernel.pdb

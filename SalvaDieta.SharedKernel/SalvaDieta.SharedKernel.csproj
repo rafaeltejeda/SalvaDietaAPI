@@ -47,10 +47,19 @@
     <Compile Include="IContainer.cs" />
     <Compile Include="IHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resourses\EmailTemplates.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailTemplates.resx</DependentUpon>
+    </Compile>
     <Compile Include="Validation\AssertionConcern.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Recourses\" />
+    <EmbeddedResource Include="Resourses\EmailTemplates.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailTemplates.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

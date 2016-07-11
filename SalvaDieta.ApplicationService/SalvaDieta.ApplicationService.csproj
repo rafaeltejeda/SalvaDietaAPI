@@ -63,9 +63,12 @@
     <Compile Include="ApplicationService.cs" />
     <Compile Include="CategoryApplicationService.cs" />
     <Compile Include="CityApplicationService.cs" />
+    <Compile Include="Handlers\Account\OnUserRegisteredHandler.cs" />
     <Compile Include="OrderApplicationService.cs" />
     <Compile Include="ProductApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Account\UserApplicationService.cs" />
+    <Compile Include="Service\Common\EmailService.cs" />
     <Compile Include="UserApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>

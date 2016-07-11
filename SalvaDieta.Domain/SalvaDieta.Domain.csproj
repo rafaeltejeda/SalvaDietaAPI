@@ -58,6 +58,8 @@
     <Compile Include="Commands\UserCommands\UpdateUserCommand.cs" />
     <Compile Include="Enums\EOrderStatus.cs" />
     <Compile Include="Enums\ERole.cs" />
+    <Compile Include="Events\UserEvents\OnUserRegisteredEvent.cs" />
+    <Compile Include="Handlers\UserHandlers\IOnStudentRegisterHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICategoryRepository.cs" />
     <Compile Include="Repositories\ICityRepository.cs" />

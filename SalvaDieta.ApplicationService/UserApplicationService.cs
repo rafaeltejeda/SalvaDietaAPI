@@ -1,8 +1,10 @@
 ﻿using SalvaDieta.Domain.Commands.UserCommands;
 using SalvaDieta.Domain.Entities;
+using SalvaDieta.Domain.Events.UserEvents;
 using SalvaDieta.Domain.Repositories;
 using SalvaDieta.Domain.Services;
 using SalvaDieta.Infra;
+using SalvaDieta.SharedKernel.Events;
 using System.Collections.Generic;
 
 
@@ -42,9 +44,11 @@ namespace SalvaDieta.ApplicationService
             _repository.Register(user);
 
             if (Commit())
-                return user;
 
-            return null;
+                DomainEvent.Raise(new OnUserRegisteredEvent(user));
+                //return user;
+
+            return user;
         }
 
         public User Update(UpdateUserCommand command)
