@@ -8,7 +8,7 @@ namespace SalvaDieta.Domain.Repositories
         List<User> Get();
         List<User> Get(int skip, int take);
 
-        User Authenticate(string email, string password);
+        User Authenticate(string email, string password);        
 
         User Get(int id);
         User GetByEmail(string email);
