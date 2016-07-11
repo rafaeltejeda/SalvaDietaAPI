@@ -6,15 +6,15 @@
                 <form id="configuraEs-form15" class="list ">
                     <label class="item item-input " id="configuraEs-input11">
                         <span class="input-label">Nome</span>
-                        <input type="text" placeholder="Usuario">
+                        <input type="text" ng-model="user.nome"placeholder="Usuario">
                     </label>
                     <label class="item item-input " id="configuraEs-input15">
                         <span class="input-label">Telefone</span>
-                        <input type="tel" placeholder="Telefone">
+                        <input type="tel" ng-model="user.cellphone" placeholder="Telefone">
                     </label>
                     <label class="item item-input " id="configuraEs-input21">
                         <span class="input-label">E-mail</span>
-                        <input type="email" placeholder="E-mail">
+                        <input type="email" ng-model="user.email" placeholder="E-mail">
                     </label>
                     <label class="item item-input " id="configuraEs-input16">
                         <span class="input-label">Senha</span>
@@ -37,14 +37,11 @@
         <div class="list card " id="configuraEs-card19">
             <div class="item item-divider">Endereço</div>
             <div class="item item-body">
-                <form id="configuraEs-form17" class="list ">
-                    <label class="item item-select " id="configuraEs-select2">
+                <form class="list">
+                    <label class="item item-select">
                         <span class="input-label">Cidade</span>
                         <select>
                             <option>Piracicaba</option>
-                            <option>Rio das Pedras</option>
-                            <option>Rio Claro</option>
-                            <option>Americana</option>
                         </select>
                     </label>
                     <label class="item item-input " id="configuraEs-input20">
@@ -52,10 +49,10 @@
                         <input type="text" placeholder="00000-000">
                     </label>
                     <p id="configuraEs-markdown11" style="color:#000000;" class=" ">
-                        <strong>Endereço:</strong>Rua endereço de tal.</p>
+                        <strong>Endereço:</strong> Rua endereço de tal.</p>
                 </form>
                 <p id="configuraEs-markdown17" style="color:#000000;" class=" ">
-                    <strong>Bairro:</strong>Um lugar ai</p>
+                    <strong>Bairro:</strong> Um lugar ai</p>
                 <form id="configuraEs-form20" class="list ">
                     <label class="item item-input " id="configuraEs-input22">
                         <span class="input-label">Numero</span>
