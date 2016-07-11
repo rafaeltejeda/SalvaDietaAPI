@@ -1,4 +1,5 @@
 ﻿using SalvaDieta.Domain.Commands.UserCommands;
+using SalvaDieta.Domain.Entities;
 using SalvaDieta.Domain.Services;
 using System.Net;
 using System.Net.Http;
@@ -35,7 +36,7 @@ namespace SalvaDieta.API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         [Route("api/user/email")]
         public Task<HttpResponseMessage> GetByEmail()
         {
