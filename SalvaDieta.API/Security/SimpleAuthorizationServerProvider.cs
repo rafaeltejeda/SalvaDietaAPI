@@ -38,7 +38,8 @@ namespace SalvaDieta.API.Security
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
 
-            identity.AddClaim(new Claim(ClaimTypes.Name, user.Email));            
+            identity.AddClaim(new Claim(ClaimTypes.Name, user.Email));
+            //identity.AddClaim(new Claim(ClaimTypes.GivenName, user.Nome));
             identity.AddClaim(new Claim(ClaimTypes.Role, user.IsAdmin ? "admin" : ""));
 
             GenericPrincipal principal = new GenericPrincipal(identity, new string[] { user.IsAdmin ? "admin" : "" });
