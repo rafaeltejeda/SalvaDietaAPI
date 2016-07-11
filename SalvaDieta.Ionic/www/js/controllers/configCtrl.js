@@ -2,11 +2,15 @@
     'use strict';
     angular.module('app').controller('configCtrl', configCtrl);
 
-    configCtrl.$inject = ['$scope', '$rootScope', '$timeout', '$ionicLoading', '$state', 'userFactory' ]
+    configCtrl.$inject = ['$http', '$scope', '$rootScope', '$timeout', '$ionicLoading', '$state', '$ionicModal', 'userFactory' ]
 
-    function configCtrl($scope, $rootScope, $timeout, $ionicLoading, $state, userFactory) {
+    function configCtrl($http, $scope, $rootScope, $timeout, $ionicLoading, $state, $ionicModal, userFactory) {
 
-        $scope.User = {};
+        $scope.user = {
+              id: 0,
+              name: '',
+
+        };
 
         activate()
 
@@ -17,6 +21,54 @@
              }
 
              getByEmail();
+
+             $scope.buscaCEP = function(){
+                   // Setup the loader
+                   $scope.loading = $ionicLoading.show({
+                         content: 'Loading',
+                         template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Carregando endereço...',
+                         animation: 'fade-in',
+                         showBackdrop: true,
+                         maxWidth: 200,
+                         showDelay: 0
+                   });
+
+                   // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
+                   $timeout(function () {
+
+                           $http.get('http://api.postmon.com.br/cep/'+ $scope.user.cep).success(function(local){
+                                $scope.user = local;
+                           });
+                           $ionicLoading.hide();
+
+                   }, 2000);
+             };
+
+
+             $ionicModal.fromTemplateUrl('my-modal.html', {
+              scope: $scope,
+              animation: 'slide-in-up'
+            }).then(function(modal) {
+              $scope.modal = modal;
+            });
+            $scope.openModal = function() {
+              $scope.modal.show();
+            };
+            $scope.closeModal = function() {
+              $scope.modal.hide();
+            };
+            // Cleanup the modal when we're done with it!
+            $scope.$on('$destroy', function() {
+              $scope.modal.remove();
+            });
+            // Execute action on hide modal
+            $scope.$on('modal.hidden', function() {
+              // Execute action
+            });
+            // Execute action on remove modal
+            $scope.$on('modal.removed', function() {
+              // Execute action
+            });
         }
 
 

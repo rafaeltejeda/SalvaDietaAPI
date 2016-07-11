@@ -51,7 +51,7 @@ namespace SalvaDieta.API.Controllers
         public Task<HttpResponseMessage> Post([FromBody]dynamic body)
         {
             var command = new RegisterUserCommand(               
-                nome: (string)body.nome,                
+                name: (string)body.name,                
                 email: (string)body.email,
                 password: (string)body.password,
                 address: (string)body.address,
@@ -82,7 +82,7 @@ namespace SalvaDieta.API.Controllers
         {
             var command = new UpdateUserCommand(
                 id: id,               
-                nome: (string)body.nome,
+                name: (string)body.name,
                 email: (string)body.email,
                 password: (string)body.password,
                 address: (string)body.address,

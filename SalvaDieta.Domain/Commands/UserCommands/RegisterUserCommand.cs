@@ -6,7 +6,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
     public class RegisterUserCommand
     {
         public RegisterUserCommand (
-               string nome,
+               string name,
                string email,
                string password,
                string address,
@@ -25,7 +25,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
                string youTube,               
                bool isAdmin)
             {
-                this.Nome = nome;
+                this.Name = name;
                 this.Email = email;
                 this.Password = password;
                 this.Address = address;
@@ -49,7 +49,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
             }
 
         public int Id { get; private set; }
-        public string Nome { get; private set; }
+        public string Name { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
         public string Address { get; private set; }

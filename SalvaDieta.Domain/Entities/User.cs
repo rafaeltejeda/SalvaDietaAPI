@@ -9,7 +9,7 @@ namespace SalvaDieta.Domain.Entities
     {
         protected User() { }
 
-        public User(string nome,                                
+        public User(string name,                                
                     string email,
                     string password,
                     string address,
@@ -28,7 +28,7 @@ namespace SalvaDieta.Domain.Entities
                     string youTube,                    
                     bool isAdmin)
         {
-            this.Nome = nome;
+            this.Name = name;
             this.Email = email;
             this.Password = StringHelper.Encrypt(password); ;
             this.Address = address;
@@ -52,7 +52,7 @@ namespace SalvaDieta.Domain.Entities
         }
 
         public int Id { get; private set; }
-        public string Nome { get; private set; }        
+        public string Name { get; private set; }        
         public string Email { get; private set; }
         public string Password { get; private set; }
         public string Address { get; private set; }
@@ -88,7 +88,7 @@ namespace SalvaDieta.Domain.Entities
         }
 
         public void UpdateUser(
-                    string nome,
+                    string name,
                     string email,
                     string password,
                     string address,

@@ -7,7 +7,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
     {
         public UpdateUserCommand(
                int id,
-               string nome,
+               string name,
                string email,
                string password,
                string address,
@@ -27,7 +27,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
                bool isAdmin)
         {
             this.Id = id;
-            this.Nome = nome;
+            this.Name = name;
             this.Email = email;
             this.Password = password;
             this.Address = address;
@@ -51,7 +51,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
         }
        
         public int Id { get; private set; }
-        public string Nome { get; private set; }
+        public string Name { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
         public string Address { get; private set; }

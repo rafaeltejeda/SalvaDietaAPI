@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201607020335484_alteração_campo_description.Designer.cs">
       <DependentUpon>201607020335484_alteração_campo_description.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607112206237_Troca_Nome_Name_User.cs" />
+    <Compile Include="Migrations\201607112206237_Troca_Nome_Name_User.Designer.cs">
+      <DependentUpon>201607112206237_Troca_Nome_Name_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pesistence\DataContexts\SalvaDietaDataContext.cs" />
     <Compile Include="IUnitOfWork.cs" />
@@ -90,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607020335484_alteração_campo_description.resx">
       <DependentUpon>201607020335484_alteração_campo_description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607112206237_Troca_Nome_Name_User.resx">
+      <DependentUpon>201607112206237_Troca_Nome_Name_User.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

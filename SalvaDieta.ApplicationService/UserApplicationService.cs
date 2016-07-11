@@ -21,7 +21,7 @@ namespace SalvaDieta.ApplicationService
 
         public User Register(RegisterUserCommand command)
         {
-            var user = new User(command.Nome,
+            var user = new User(command.Name,
                                 command.Email,
                                 command.Password,
                                 command.Address,
@@ -54,7 +54,7 @@ namespace SalvaDieta.ApplicationService
         public User Update(UpdateUserCommand command)
         {
             var user = _repository.Get(command.Id);
-            user.UpdateUser(command.Nome,
+            user.UpdateUser(command.Name,
                             command.Email,
                             command.Password,
                             command.Address,
