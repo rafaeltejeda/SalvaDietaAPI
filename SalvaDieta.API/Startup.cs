@@ -48,6 +48,12 @@ namespace SalvaDieta.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{email}",
+                defaults: new { email = RouteParameter.Optional }
+            );
         }
 
         public static void ConfigureDependencyInjection(HttpConfiguration config, UnityContainer container)
