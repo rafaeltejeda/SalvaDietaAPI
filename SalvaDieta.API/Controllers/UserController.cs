@@ -36,8 +36,8 @@ namespace SalvaDieta.API.Controllers
 
         [HttpGet]
         //[Authorize(Roles = "admin")]
-        [Route("api/user/{email}")]
-        public Task<HttpResponseMessage> GetById(string email)
+        [Route("api/user/email/{email}")]
+        public Task<HttpResponseMessage> GetByEmail(string email)
         {
             var result = _service.GetByEmail(email);
             return CreateResponse(HttpStatusCode.OK, result);
