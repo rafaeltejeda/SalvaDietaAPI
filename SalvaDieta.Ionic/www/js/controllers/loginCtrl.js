@@ -20,7 +20,8 @@ function loginCtrl($scope, $state, $rootScope, SETTINGS, accountFactory) {
                 .success(success)
                 .catch(fail);
 
-            function success(response) {               
+            function success(response) {
+                console.log($scope.login);              
                 $rootScope.user = $scope.login.email;                
                 $rootScope.token = response.access_token;
 

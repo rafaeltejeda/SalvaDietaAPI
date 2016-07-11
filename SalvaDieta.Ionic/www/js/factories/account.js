@@ -4,9 +4,7 @@
 
     accountFactory.$inject = ['$http', 'SETTINGS'];
 
-    function accountFactory($http, SETTINGS) {
-        
-        debugger;
+    function accountFactory($http, SETTINGS) {            
         
         return {
             login: login
