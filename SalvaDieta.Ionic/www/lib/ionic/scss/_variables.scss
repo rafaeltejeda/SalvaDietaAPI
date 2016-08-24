@@ -6,7 +6,7 @@ $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
 $positive:                        #387ef5 !default;
 $calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
+$balanced:                        #21382F!default;
 $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
@@ -37,9 +37,9 @@ $headings-font-weight:            500 !default;
 $headings-line-height:            1.2 !default;
 
 $base-background-color:           #78D864 !default;
-$base-color:                      #000 !default;
+$base-color:                      #333 !default;
 
-$link-color:                      $positive !default;
+$link-color:                      #fff !default;
 $link-hover-color:                darken($link-color, 15%) !default;
 
 $content-padding:                 10px !default;
@@ -73,7 +73,7 @@ $button-clear-padding:            6px !default;
 $button-border-radius:            4px !default;
 $button-border-width:             1px !default;
 
-$button-font-size:                16px !default;
+$button-font-size:                18px !default;
 $button-height:                   42px !default;
 $button-padding:                  12px !default;
 $button-icon-size:                24px !default;
@@ -157,10 +157,10 @@ $button-default-active-border:    $button-stable-active-border !default;
 // Bars
 // -------------------------------
 
-$bar-height:                      44px !default;
-$bar-title-font-size:             17px !default;
-$bar-padding-portrait:            5px !default;
-$bar-padding-landscape:           5px !default;
+$bar-height:                      50px !default;
+$bar-title-font-size:             20px !default;
+$bar-padding-portrait:            10px !default;
+$bar-padding-landscape:           10px !default;
 $bar-transparency:                1 !default;
 
 $bar-footer-height:               $bar-height !default;
@@ -370,7 +370,7 @@ $item-dark-active-border:         $button-dark-active-border !default;
 $item-default-bg:                 Transparent !default;
 $item-default-border:             Transparent !default;
 $item-default-text:               #fff !default;
-$item-default-active-bg:          #78D864 !default;
+$item-default-active-bg:          #365C4E !default;
 $item-default-active-border:      Transparent !default;
 
 

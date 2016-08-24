@@ -1,28 +1,33 @@
-<ion-view title="{{product.title}}" id="page11" style="background-color:#78D864;" class=" ">
+<ion-view title="{{product.title}}" id="page11" style="background-color:#78D864;">
     <ion-content padding="true" class="has-header">
         <div style="text-align: center; background-color: rgb(232, 235, 239);">
-             <img ng-src="{{product.image}}" widht="100%" alt=""/>
+          <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true">
+                <ion-slide>
+                  <div class="box blue">
+                       <center><img ng-src="{{product.image}}" widht="100%" alt=""/></center>
+                  </div>
+                </ion-slide>
+          </ion-slide-box>
         </div>
         <div class="card " id="PaginaDoProduto-card1">
             <div class="item item-divider">{{product.title}}</div>
             <div class="item item-body">
-               
-                 <p id="PaginaDoProduto-markdown7" style="color:#000000;" class=" ">{{product.description}}</p>
-                 <p id="PaginaDoProduto-markdown12" style="color:#000000; text-align:center;" class=" ">Quantidade:
-                    <strong>{{product.weight}} kg</strong> | Preço: <strong>R$ {{product.price}}</strong>
-                 </p>                    
-                             
+
+                 <p style="color:#000000;">{{product.description}}</p>
+                 <p style="color:#000000; text-align:center;">
+                    Quantidade: <strong>{{product.weight}} kg</strong> | Preço: <strong>R$ {{product.price}}</strong>
+                 </p>
+
                  <div class="list">
-                      <div class="item range range-positive">
-                           <i class="icon ion-ios-sunny-outline"></i>
-                           <input type="range" ng-model="product.weight" name="volume" min="0" max="900" value="300">
-                           <i class="icon ion-ios-sunny"></i>
-                      </div>
-                </div>
-                
+                      <label class="item item-input item-floating-label">
+                         <span class="input-label">Quantidade</span>
+                         <input type="number" placeholder="Quantidade">
+                      </label>
+                 </div>
+
                 <button class=" button button-balanced  button-block " ng-click="addCart(product)">Comprar</button>
             </div>
         </div>
-        <form id="PaginaDoProduto-form4" class="list "></form>
+
     </ion-content>
 </ion-view>

@@ -3,17 +3,14 @@ angular.module('app').controller('loginCtrl', loginCtrl);
 
 loginCtrl.$inject = ['$scope', '$state', '$rootScope', 'SETTINGS', 'accountFactory'];
 
-function loginCtrl($scope, $state, $rootScope, SETTINGS, accountFactory) {       
-        
-        var authProvider = 'facebook';
-        var authSettings = { 'remember': true };
+function loginCtrl($scope, $state, $rootScope, SETTINGS, accountFactory) {
 
         $scope.login = {
-            email: '',            
+            email: '',
             password: ''
         };
 
-        $scope.submit = login;  
+        $scope.submit = login;
 
         function login() {
             accountFactory.login($scope.login)
@@ -21,8 +18,8 @@ function loginCtrl($scope, $state, $rootScope, SETTINGS, accountFactory) {
                 .catch(fail);
 
             function success(response) {
-                console.log($scope.login);              
-                $rootScope.user = $scope.login.email;                
+
+                $rootScope.user = $scope.login.email;
                 $rootScope.token = response.access_token;
 
                 localStorage.setItem(SETTINGS.AUTH_TOKEN, response.access_token);
@@ -31,8 +28,8 @@ function loginCtrl($scope, $state, $rootScope, SETTINGS, accountFactory) {
                 $state.go('menu.home');
             }
 
-            function fail(error) {              
+            function fail(error) {
                 swal("Falha na autenticação", error.data.error_description, "error");
             }
-        } 
+        }
 };

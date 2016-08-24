@@ -1,9 +1,10 @@
 <ion-view title="Configurações" id="page16" style="background-color:#78D864;" class=" ">
     <ion-content padding="true" class="has-header">
+        <form>
         <div class="list card " id="configuraEs-card16">
             <div class="item item-divider">Seu perfil</div>
             <div class="item item-body">
-                <form id="configuraEs-form15" class="list ">
+                <div id="configuraEs-form15" class="list">
                     <label class="item item-input " id="configuraEs-input11">
                         <span class="input-label">Nome</span>
                         <input type="text" ng-model="user.name"placeholder="Nome completo">
@@ -24,42 +25,43 @@
                         <span class="input-label">Confirma Senha</span>
                         <input type="password" placeholder="******">
                     </label>
-                </form>
-                <p id="configuraEs-markdown16" style="color:#000000;" class=" ">Suas redes sociais</p>
+                </div>
+                <p style="color:#000000;" class=" ">Suas redes sociais</p>
                 <div id="configuraEs-button-bar6" class=" button-bar ">
                     <button id="configuraEs-button14" class=" button button-assertive  button-block icon ion-social-googleplus "></button>
                     <button id="configuraEs-button17" class=" button button-positive  button-block icon ion-social-facebook "></button>
                 </div>
                 <div class="spacer" style="width: 251px; height: 25px;"></div>
-                <form id="configuraEs-form16" class="list "></form>
             </div>
         </div>
         <div class="list card " id="configuraEs-card19">
             <div class="item item-divider">Endereço</div>
             <div class="item item-body">
                 <form class="list">
-                    <label class="item item-select">
-                        <span class="input-label">Cidade</span>
-                        <select>
-                            <option>Piracicaba</option>
-                        </select>
+                      <label class="item item-select">
+                             <span class="input-label">Cidade</span>
+                             <select>
+                                   <option>Piracicaba</option>
+                             </select>
                     </label>
                     <label class="item item-input">
                            <button class="button button-outline button-block button-calm" ng-click="modal.show()">Alterar endereço</button>
                     </label>
 
-                    <p style="color:#000000;"> <strong>Logradouro:</strong> {{user.logradouro}}.</p>
-                    <p style="color:#000000;"> <strong>Numero:</strong> {{user.number}}.</p>
-                    <p style="color:#000000;"> <strong>Complemento:</strong> {{user.complement}}.</p>
-                    <p style="color:#000000;"> <strong>Bairro:</strong> {{user.bairro}}.</p>
-                    <p style="color:#000000;"> <strong>Cidade:</strong> {{user.cidade}}.</p>
-                    <p style="color:#000000;"> <strong>Estado:</strong> {{user.estado}}.</p>
-                    <p style="color:#000000;"> <strong>CEP:</strong> {{user.cep}}.</p>
+                    <p style="color:#000000;"><strong>Logradouro:</strong> {{user.logradouro}}.</p>
+                    <p style="color:#000000;"><strong>Numero:</strong> {{user.number}}.</p>
+                    <p style="color:#000000;"><strong>Complemento:</strong> {{user.complement}}.</p>
+                    <p style="color:#000000;"><strong>Bairro:</strong> {{user.bairro}}.</p>
+                    <p style="color:#000000;"><strong>Cidade:</strong> {{user.cidade}}.</p>
+                    <p style="color:#000000;"><strong>Estado:</strong> {{user.estado}}.</p>
+                    <p style="color:#000000;"><strong>CEP:</strong> {{user.cep}}.</p>
                 </form>
             </div>
         </div>
 
-        <button id="configuraEs-button10" class=" button button-light  button-block ">Salvar</button>
+        <button ng-click="saveUser()" class=" button button-light button-block" type="submit">Salvar</button>
+
+        <div class="spacer" style="width: 251px; height: 25px;"></div>
 
         <script id="my-modal.html" type="text/ng-template">
           <ion-modal-view>
@@ -112,6 +114,6 @@
             </ion-content>
           </ion-modal-view>
         </script>
-
+      </form>
     </ion-content>
 </ion-view>

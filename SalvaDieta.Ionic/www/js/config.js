@@ -1,5 +1,5 @@
 (function(){
-    'use strict';     
+    'use strict';
 
     angular.module('app').constant('SETTINGS', {
         'VERSION': '0.0.1',
@@ -7,13 +7,14 @@
         'AUTH_TOKEN': 'salvadieta-token',
         'AUTH_USER': 'salvadieta-user',
         //'SERVICE_URL': 'http://localhost:55568/'
-        'SERVICE_URL': 'http://salva-dieta-api.azurewebsites.net/'        
+        'SERVICE_URL': 'http://salva-dieta-api.azurewebsites.net/'
     });
 
-    angular.module('app').run(function ($rootScope, $location, SETTINGS) {
-                     
+    angular.module('app').run(function ($rootScope, $location, SETTINGS, cartFactory) {
+
             var token = localStorage.getItem(SETTINGS.AUTH_TOKEN);
             var user = localStorage.getItem(SETTINGS.AUTH_USER);
+            var products = localStorage.getItem(products);
 
             $rootScope.user = null;
             $rootScope.token = null;
@@ -28,6 +29,13 @@
                     }
                 }
             }
+
+            var totalCart = 0           
+            
+            $rootScope.$watch(function() {
+                 totalCart = cartFactory.getAll().length;
+                $rootScope.productsTotalItems = totalCart;
+            });
 
             $rootScope.$on("$routeChangeStart", function (event, next, current) {
                 if ($rootScope.user == null) {

@@ -49,17 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201606241836556_v1.cs" />
-    <Compile Include="Migrations\201606241836556_v1.Designer.cs">
-      <DependentUpon>201606241836556_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607020335484_alteração_campo_description.cs" />
-    <Compile Include="Migrations\201607020335484_alteração_campo_description.Designer.cs">
-      <DependentUpon>201607020335484_alteração_campo_description.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607112206237_Troca_Nome_Name_User.cs" />
-    <Compile Include="Migrations\201607112206237_Troca_Nome_Name_User.Designer.cs">
-      <DependentUpon>201607112206237_Troca_Nome_Name_User.cs</DependentUpon>
+    <Compile Include="Migrations\201608240137090_Banco-Zero.cs" />
+    <Compile Include="Migrations\201608240137090_Banco-Zero.Designer.cs">
+      <DependentUpon>201608240137090_Banco-Zero.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pesistence\DataContexts\SalvaDietaDataContext.cs" />
@@ -89,14 +81,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201606241836556_v1.resx">
-      <DependentUpon>201606241836556_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607020335484_alteração_campo_description.resx">
-      <DependentUpon>201607020335484_alteração_campo_description.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607112206237_Troca_Nome_Name_User.resx">
-      <DependentUpon>201607112206237_Troca_Nome_Name_User.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608240137090_Banco-Zero.resx">
+      <DependentUpon>201608240137090_Banco-Zero.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
