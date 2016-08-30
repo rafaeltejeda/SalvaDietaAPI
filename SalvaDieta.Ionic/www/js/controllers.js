@@ -2,37 +2,43 @@ angular.module('app.controllers', [])
 
 .controller('menuCtrl', function($scope, $rootScope, $state, $ionicSideMenuDelegate, $ionicActionSheet, $timeout, SETTINGS, cartFactory) {
 
-   $scope.toggleLeft = function() {
-       $ionicSideMenuDelegate.toggleLeft();
-   };
+      $scope.toggleLeft = function() {
+          $ionicSideMenuDelegate.toggleLeft();
+      };
 
-  $scope.user = $rootScope.user;
+      var totalCart = 0           
+                
+      $scope.$watch(function() {
+              totalCart = cartFactory.getAll().length;
+              $scope.productsTotalItems = totalCart;
+      });
 
-  $scope.show = function() {
+      $scope.user = $rootScope.user;
 
-   // Show the action sheet
-   var hideSheet = $ionicActionSheet.show({
-     buttons: [
-       { text: '<center><b>Sair</b></center>' }
+      $scope.show = function() {
 
-     ],
-     titleText: 'Deseja realmente sair?',
-     cancelText: 'Cancel',
-     cancel: function() {
-          // add cancel code..
-        },
-     buttonClicked: function(index) {
-        $rootScope.user = null;
-        $rootScope.token = null;
-        localStorage.removeItem(SETTINGS.AUTH_TOKEN);
-        localStorage.removeItem(SETTINGS.AUTH_USER);
-        $state.go('login');
-     }
-   });
+      // Show the action sheet
+      var hideSheet = $ionicActionSheet.show({
+          buttons: [
+            { text: '<center><b>Sair</b></center>' }
 
+          ],
+          titleText: 'Deseja realmente sair?',
+          cancelText: 'Cancel',
+          cancel: function() {
+                // add cancel code..
+          },
+          buttonClicked: function(index) {
+                $rootScope.user = null;
+                $rootScope.token = null;
+                localStorage.removeItem(SETTINGS.AUTH_TOKEN);
+                localStorage.removeItem(SETTINGS.AUTH_USER);
+                $state.go('login');
+          }
 
+        });
 
- };
+      };
 
 })
 

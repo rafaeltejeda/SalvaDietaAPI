@@ -1,13 +1,13 @@
 <ion-view title="Configurações" id="page16" style="background-color:#78D864;" class=" ">
-    <ion-content padding="true" class="has-header">
+    <ion-content padding="true" class="has-header conteudo">
         <form>
-        <div class="list card " id="configuraEs-card16">
+        <div class="list card">
             <div class="item item-divider">Seu perfil</div>
             <div class="item item-body">
                 <div id="configuraEs-form15" class="list">
                     <label class="item item-input " id="configuraEs-input11">
                         <span class="input-label">Nome</span>
-                        <input type="text" ng-model="user.name"placeholder="Nome completo">
+                        <input type="text" ng-model="user.name" placeholder="Nome completo">
                     </label>
                     <label class="item item-input " id="configuraEs-input15">
                         <span class="input-label">Telefone</span>
@@ -34,7 +34,7 @@
                 <div class="spacer" style="width: 251px; height: 25px;"></div>
             </div>
         </div>
-        <div class="list card " id="configuraEs-card19">
+        <div class="list card ui-br-cep-mask">
             <div class="item item-divider">Endereço</div>
             <div class="item item-body">
                 <form class="list">
@@ -55,6 +55,7 @@
                     <p style="color:#000000;"><strong>Cidade:</strong> {{user.cidade}}.</p>
                     <p style="color:#000000;"><strong>Estado:</strong> {{user.estado}}.</p>
                     <p style="color:#000000;"><strong>CEP:</strong> {{user.cep}}.</p>
+                    
                 </form>
             </div>
         </div>
@@ -78,7 +79,7 @@
                                 <form id="configuraEs-form15" class="list">
                                     <label class="item item-input">
                                         <span class="input-label">CEP:</span>
-                                        <input type="text" ng-blur="buscaCEP()" ng-model="user.cep" placeholder="CEP" required>
+                                        <input type="text" ng-blur="buscaCEP()" ng-model="user.cep" placeholder="CEP" ui-br-cep-mask required>
                                     </label>
                                     <label class="item item-input">
                                         <span class="input-label">Logradouro:</span>
@@ -108,7 +109,7 @@
                               </div>
                          </div>
 
-                         <button class="button button-light button-block" ng-click="modal.hide()">Fechar</button>
+                         <button class="button button-light button-block" ng-click="modal.hide()">Carregar</button>
 
                          </form>
             </ion-content>

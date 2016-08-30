@@ -26,17 +26,16 @@
 
             // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
             $timeout(function () {
-                  $scope.products = cartFactory.getAll();
-                  $ionicLoading.hide();
+                  $scope.$watch(function() {
+                        $scope.products = cartFactory.getAll();
+                        $ionicLoading.hide();
+                  });                 
+                  
             }, 2000);
           }
 
           $scope.remove = function (product) {
             cartFactory.remove(product);
-
-            var totalItems = cartFactory.getAll().length;
-            $scope.productsTotalItems = totalItems;
-
           };
     };
 })();

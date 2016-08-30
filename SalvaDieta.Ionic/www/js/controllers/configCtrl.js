@@ -109,6 +109,7 @@
 
                       // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
                       $timeout(function () {
+                            debugger;
                             $scope.user = response;
                             $ionicLoading.hide();
                       }, 2000);

@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "angular-number-picker": "^2.1.0",
-    "ionic-numberpicker": "^1.1.4"
+    "ionic-numberpicker": "^1.1.4",
+    "angular-input-masks": "^2.4.0"
   }
 }

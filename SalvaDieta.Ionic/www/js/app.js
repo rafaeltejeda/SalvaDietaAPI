@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'ngCordova', 'ngStorage'])
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'ngCordova', 'ngStorage', 'ngMessages', 'ui.utils.masks'])
 
       .run(function($ionicPlatform, $rootScope, $window) {
         $ionicPlatform.ready(function() {
@@ -18,13 +18,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
           if (window.StatusBar) {
             // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
-          }
-
-          angular.element($window).on('storage', function(event) {
-              if (event.key === 'products') {
-                $rootScope.$apply();
-              }
-          });
+          }          
 
       });
 })

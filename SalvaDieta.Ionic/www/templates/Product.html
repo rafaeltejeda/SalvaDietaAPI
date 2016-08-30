@@ -1,5 +1,5 @@
 <ion-view title="{{product.title}}" id="page11" style="background-color:#78D864;">
-    <ion-content padding="true" class="has-header">
+    <ion-content padding="true" class="has-header ">
         <div style="text-align: center; background-color: rgb(232, 235, 239);">
           <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true">
                 <ion-slide>
@@ -9,7 +9,8 @@
                 </ion-slide>
           </ion-slide-box>
         </div>
-        <div class="card " id="PaginaDoProduto-card1">
+        <div class="conteudo">
+        <div class="card">
             <div class="item item-divider">{{product.title}}</div>
             <div class="item item-body">
 
@@ -28,6 +29,6 @@
                 <button class=" button button-balanced  button-block " ng-click="addCart(product)">Comprar</button>
             </div>
         </div>
-
+        </div>
     </ion-content>
 </ion-view>

@@ -51,9 +51,9 @@ namespace SalvaDieta.API.Controllers
         public Task<HttpResponseMessage> Post([FromBody]dynamic body)
         {
             var command = new RegisterUserCommand(               
-                name: (string)body.name,                
+                name: (string)body.nome,                
                 email: (string)body.email,
-                password: (string)body.password,
+                password: (string)body.passwordConfirmation,
                 address: (string)body.address,
                 complement: (string)body.complement,
                 number: (string)body.number,

@@ -6,9 +6,13 @@
         'CURR_ENV': 'dev',
         'AUTH_TOKEN': 'salvadieta-token',
         'AUTH_USER': 'salvadieta-user',
-        //'SERVICE_URL': 'http://localhost:55568/'
-        'SERVICE_URL': 'http://salva-dieta-api.azurewebsites.net/'
+        'SERVICE_URL': 'http://localhost:55568/'
+        //'SERVICE_URL': 'http://salvadieta.azurewebsites.net/'
     });
+    
+
+    
+    
 
     angular.module('app').run(function ($rootScope, $location, SETTINGS, cartFactory) {
 
@@ -28,14 +32,7 @@
                         'Authorization': 'Bearer ' + $rootScope.token
                     }
                 }
-            }
-
-            var totalCart = 0           
-            
-            $rootScope.$watch(function() {
-                 totalCart = cartFactory.getAll().length;
-                $rootScope.productsTotalItems = totalCart;
-            });
+            }            
 
             $rootScope.$on("$routeChangeStart", function (event, next, current) {
                 if ($rootScope.user == null) {

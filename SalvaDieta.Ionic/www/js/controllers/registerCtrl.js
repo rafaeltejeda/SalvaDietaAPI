@@ -10,7 +10,7 @@
               id: 0,
               nome: '',
               email: '',
-              password: '',
+              passwordConfirmation: '',
               address: '',
               complement: '',
               number: '',
@@ -28,7 +28,7 @@
               isAdmin: 0
         }
 
-        $scope.saveUser = saveUser; 
+        $scope.createUser = saveUser; 
 
         activate()
 
@@ -49,6 +49,7 @@
                       
                  // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
                  $timeout(function () {
+                          
                           registerFactory.post($scope.user)            
                           .success(success)
                           .catch(fail);
@@ -56,9 +57,7 @@
                  }, 2000);       
                
 
-            function success(response) {              
-             
-                     console.log('teste');
+            function success(response) {             
                      $state.go('menu.home');                        
             }
 
