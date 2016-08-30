@@ -36,7 +36,16 @@ namespace SalvaDieta.API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "admin")]
+        //[Authorize]
+        [Route("api/users/{id}")]
+        public Task<HttpResponseMessage> Get(int id)
+        {
+            var users = _service.Get(id);
+            return CreateResponse(HttpStatusCode.OK, users);
+        }
+
+        [HttpGet]
+        //[Authorize(Roles = "admin")]
         [Route("api/user/email")]
         public Task<HttpResponseMessage> GetByEmail()
         {
@@ -46,7 +55,7 @@ namespace SalvaDieta.API.Controllers
         }
 
         [HttpPost]
-        [Route("api/users")]
+        [Route("api/user")]
         //[Authorize]
         public Task<HttpResponseMessage> Post([FromBody]dynamic body)
         {
@@ -76,7 +85,7 @@ namespace SalvaDieta.API.Controllers
         }
 
         [HttpPut]
-        [Route("api/users")]
+        [Route("api/user")]
         //[Authorize]
         public Task<HttpResponseMessage> Put(int id, [FromBody]dynamic body)
         {

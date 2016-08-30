@@ -23,7 +23,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.telefone.$invalid && signupForm.$submitted,'no-errors' : signupForm.telefone.$valid && signupForm.$submitted}">
                 <ion-label >Celular:</ion-label>
-                <input type="tel" name="telefone" placeholder="Seu número do celular!" ui-br-phone-number ng-model="user.telefone" required>
+                <input type="tel" name="telefone" placeholder="Seu número do celular!" ui-br-phone-number ng-model="user.cellphone" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.telefone.$error && signupForm.$submitted" ng-messages="signupForm.telefone.$error">

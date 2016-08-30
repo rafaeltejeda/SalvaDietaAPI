@@ -22,15 +22,15 @@
         }
 
         function post(user) {
-            return $http.post(SETTINGS.SERVICE_URL + 'api/users', user, $rootScope.header);
+            return $http.post(SETTINGS.SERVICE_URL + 'api/user', user, $rootScope.header);
         }
 
         function put(user) {
-            return $http.put(SETTINGS.SERVICE_URL + 'api/users/' + user.id, user, $rootScope.header);
+            return $http.put(SETTINGS.SERVICE_URL + 'api/user/' + user.id, user, $rootScope.header);
         }
 
         function remove(user) {
-            return $http.delete(SETTINGS.SERVICE_URL + 'api/users/' + user.id, $rootScope.header);
+            return $http.delete(SETTINGS.SERVICE_URL + 'api/user/' + user.id, $rootScope.header);
         }
     }
     

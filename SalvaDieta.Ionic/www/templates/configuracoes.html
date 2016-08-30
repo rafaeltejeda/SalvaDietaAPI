@@ -1,10 +1,15 @@
-<ion-view title="Configurações" id="page16" style="background-color:#78D864;" class=" ">
-    <ion-content padding="true" class="has-header conteudo">
-        <form>
+<ion-view title="Configurações" style="background-color:#78D864;">
+    <ion-content padding="true" class="has-header">
+    <div class="conteudo">
+        <div>
+            <center><img src="img/salvadieta.svg" width="320" /></center>
+        </div>
+        <form name="signupForm" ng-submit="upUser()" class="no-margin" novalidate="">
+        
         <div class="list card">
             <div class="item item-divider">Seu perfil</div>
             <div class="item item-body">
-                <div id="configuraEs-form15" class="list">
+                <div class="list">
                     <label class="item item-input " id="configuraEs-input11">
                         <span class="input-label">Nome</span>
                         <input type="text" ng-model="user.name" placeholder="Nome completo">
@@ -34,87 +39,57 @@
                 <div class="spacer" style="width: 251px; height: 25px;"></div>
             </div>
         </div>
-        <div class="list card ui-br-cep-mask">
+        <div class="list card">
             <div class="item item-divider">Endereço</div>
             <div class="item item-body">
-                <form class="list">
-                      <label class="item item-select">
-                             <span class="input-label">Cidade</span>
-                             <select>
-                                   <option>Piracicaba</option>
-                             </select>
-                    </label>
-                    <label class="item item-input">
-                           <button class="button button-outline button-block button-calm" ng-click="modal.show()">Alterar endereço</button>
-                    </label>
+                <div class="list">
+                     <label class="item item-select">
+                            <span class="input-label">Cidade</span>
+                            <select>
+                                  <option>Piracicaba</option>
+                            </select>
+                     </label>                    
 
-                    <p style="color:#000000;"><strong>Logradouro:</strong> {{user.logradouro}}.</p>
-                    <p style="color:#000000;"><strong>Numero:</strong> {{user.number}}.</p>
-                    <p style="color:#000000;"><strong>Complemento:</strong> {{user.complement}}.</p>
-                    <p style="color:#000000;"><strong>Bairro:</strong> {{user.bairro}}.</p>
-                    <p style="color:#000000;"><strong>Cidade:</strong> {{user.cidade}}.</p>
-                    <p style="color:#000000;"><strong>Estado:</strong> {{user.estado}}.</p>
-                    <p style="color:#000000;"><strong>CEP:</strong> {{user.cep}}.</p>
-                    
-                </form>
+                     <div class="list">
+                          <label class="item item-input">
+                                 <span class="input-label">CEP:</span>
+                                 <input type="text" ng-blur="buscaCEP()" ng-model="user.cep" placeholder="CEP" ui-br-cep-mask>
+                          </label>
+                          <label class="item item-input">
+                                 <span class="input-label">Logradouro:</span>
+                                 <input type="text" ng-model="user.logradouro" ng-disabled="formAddress.$invalid" placeholder="Logradouro">
+                          </label>
+                          <label class="item item-input">
+                                 <span class="input-label">Numero:</span>
+                                 <input type="tel" ng-model="user.number" ng-disabled="formAddress.$invalid" placeholder="Numero">
+                          </label>
+                          <label class="item item-input">
+                                 <span class="input-label">Complemento:</span>
+                                 <input type="tel" ng-model="user.complement" ng-disabled="formAddress.$invalid" placeholder="Complemento">
+                          </label>
+                          <label class="item item-input">
+                                 <span class="input-label">Bairro:</span>
+                                 <input type="tel" ng-model="user.bairro" ng-disabled="formAddress.$invalid" placeholder="Bairro">
+                          </label>
+                          <label class="item item-input">
+                                 <span class="input-label">Cidade:</span>
+                                 <input type="text" ng-model="user.cidade" ng-disabled="formAddress.$invalid" placeholder="Cidade">
+                          </label>
+                          <label class="item item-input">
+                                 <span class="input-label">Estado:</span>
+                                 <input type="text" ng-model="user.estado" ng-disabled="formAddress.$invalid" placeholder="Estado">
+                          </label>
+                     </div>              
+
+                </div>
             </div>
         </div>
 
-        <button ng-click="saveUser()" class=" button button-light button-block" type="submit">Salvar</button>
+        <input type="submit" class="button button-balanced button-block" value="Salvar">
 
         <div class="spacer" style="width: 251px; height: 25px;"></div>
-
-        <script id="my-modal.html" type="text/ng-template">
-          <ion-modal-view>
-            <ion-header-bar>
-              <h1 class="title">Meu Endereço</h1>
-              <button class="button button-clear button-dark button-icon ion-close-round" ng-click="modal.hide()"></button>
-            </ion-header-bar>
-            <ion-content style="background-color:#78D864;" class="has-header padding">
-                         <form name="formAddress" novalidate>
-
-                         <div class="list card">
-                              <div class="item item-divider">Endereço</div>
-                              <div class="item item-body">
-                                <form id="configuraEs-form15" class="list">
-                                    <label class="item item-input">
-                                        <span class="input-label">CEP:</span>
-                                        <input type="text" ng-blur="buscaCEP()" ng-model="user.cep" placeholder="CEP" ui-br-cep-mask required>
-                                    </label>
-                                    <label class="item item-input">
-                                        <span class="input-label">Logradouro:</span>
-                                        <input type="text" ng-model="user.logradouro" ng-disabled="formAddress.$invalid">
-                                    </label>
-                                    <label class="item item-input">
-                                        <span class="input-label">Numero:</span>
-                                        <input type="tel" ng-model="user.number" ng-disabled="formAddress.$invalid">
-                                    </label>
-                                    <label class="item item-input">
-                                        <span class="input-label">Complemento:</span>
-                                        <input type="tel" ng-model="user.complement" ng-disabled="formAddress.$invalid">
-                                    </label>
-                                    <label class="item item-input">
-                                        <span class="input-label">Bairro:</span>
-                                        <input type="tel" ng-model="user.bairro" ng-disabled="formAddress.$invalid">
-                                    </label>
-                                    <label class="item item-input">
-                                        <span class="input-label">Cidade:</span>
-                                        <input type="text" ng-model="user.cidade" ng-disabled="formAddress.$invalid">
-                                    </label>
-                                    <label class="item item-input">
-                                        <span class="input-label">Estado:</span>
-                                        <input type="text" ng-model="user.estado" ng-disabled="formAddress.$invalid">
-                                    </label>
-                                </form>
-                              </div>
-                         </div>
-
-                         <button class="button button-light button-block" ng-click="modal.hide()">Carregar</button>
-
-                         </form>
-            </ion-content>
-          </ion-modal-view>
-        </script>
+        
       </form>
+    </div>  
     </ion-content>
 </ion-view>

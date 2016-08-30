@@ -8,19 +8,18 @@
 
         $scope.user = {};
         $scope.buscaCEP = getZip;
-        $scope.saveUser = updateUser;
-
+        $scope.upUser = updateUser;
+    
         activate()
 
         function activate() {
 
              if ($rootScope.user == null) {
-                    $state.go('login');
+                 $state.go('login');
              }
 
              getByEmail();
              getModal();
-
         }
 
         function getModal(){
@@ -52,6 +51,7 @@
         }
 
         function getZip(){
+             
              var zip = $scope.user.cep;
 
              cepFactory.getCEP(zip)
@@ -73,10 +73,7 @@
                       // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
                       $timeout(function () {
                             $scope.user = response;
-
                             $scope.address = response.logradouro;
-
-
                             $ionicLoading.hide();
                       }, 2000);
              }
@@ -108,8 +105,7 @@
                       });
 
                       // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
-                      $timeout(function () {
-                            debugger;
+                      $timeout(function () {                            
                             $scope.user = response;
                             $ionicLoading.hide();
                       }, 2000);
@@ -123,56 +119,17 @@
             }
         }
 
-        function addUser() {
-                 // Setup the loader
-                 $scope.loading = $ionicLoading.show({
-                        content: 'Loading',
-                        template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Cadastrando...',
-                        animation: 'fade-in',
-                        showBackdrop: true,
-                        maxWidth: 200,
-                        showDelay: 0
-                 });
-
-                 // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
-                 $timeout(function () {
-                          registerFactory.post($scope.user)
-                          .success(success)
-                          .catch(fail);
-                          $ionicLoading.hide();
-                 }, 2000);
-
-
-            function success(response) {
-
-                     console.log('teste');
-                     $state.go('menu.home');
-            }
-
-            function fail(error) {
-                console.log(error);
-                if (error.status == 401)
-                    swal("Você não tem permissão para ver essa página", 'Requisição não autorizada.', "error");
-                else
-                    swal("Sua requisição não pode ser processada", 'Falha na requisição.', "error");
-            }
-        }
-
-        function updateUser() {
-
-            console.log($scope.user);
+        function updateUser() {       
 
             userFactory.put($scope.user)
             .success(success)
             .catch(fail);
 
-            function success(response) {
-                console.log(response);
-                swal("Parabéns", 'Produto ' + response.title + ' alterado com secesso.', "success");
+            function success(response) {                
+                swal("Parabéns", 'Alterado com secesso.', "success");
             }
 
-            function fail(error) {
-                console.log(error);
+            function fail(error) {                
                 if (error.status == 401)
                     swal("Você não tem permissão para ver essa página", 'Requisição não autorizada.', "error");
                 else

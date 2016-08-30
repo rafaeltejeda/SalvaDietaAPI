@@ -26,7 +26,7 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\bin\Debug\En
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\bin\Debug\SalvaDieta.SharedKernel.pdb
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.csprojResolveAssemblyReference.cache
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.dll
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.pdb
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.Migrations.BancoZero.resources
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.csproj.GenerateResource.Cache
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.dll
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.pdb
