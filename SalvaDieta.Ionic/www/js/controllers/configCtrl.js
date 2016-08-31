@@ -19,35 +19,6 @@
              }
 
              getByEmail();
-             getModal();
-        }
-
-        function getModal(){
-              $ionicModal.fromTemplateUrl('my-modal.html', {
-               scope: $scope,
-               animation: 'slide-in-up'
-             }).then(function(modal) {
-               $scope.modal = modal;
-             });
-
-             $scope.openModal = function() {
-               $scope.modal.show();
-             };
-             $scope.closeModal = function() {
-               $scope.modal.hide();
-             };
-             // Cleanup the modal when we're done with it!
-             $scope.$on('$destroy', function() {
-               $scope.modal.remove();
-             });
-             // Execute action on hide modal
-             $scope.$on('modal.hidden', function() {
-               // Execute action
-             });
-             // Execute action on remove modal
-             $scope.$on('modal.removed', function() {
-               // Execute action
-             });
         }
 
         function getZip(){
@@ -113,7 +84,7 @@
 
              function fail(error) {
                       if (error.status == 401)
-                           swal("Você não tem permissão para ver essa página", 'Requisição não autorizada.', "error");
+                           $state.go('login');
                       else
                       swal("Sua requisição não pode ser processada", 'Falha na requisição.', "error");
             }
@@ -131,7 +102,7 @@
 
             function fail(error) {                
                 if (error.status == 401)
-                    swal("Você não tem permissão para ver essa página", 'Requisição não autorizada.', "error");
+                    $state.go('login');                    
                 else
                     swal("Sua requisição não pode ser processada", 'Falha na requisição.', "error");
             }
