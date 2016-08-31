@@ -76,7 +76,7 @@
                       });
 
                       // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
-                      $timeout(function () {                            
+                      $timeout(function () {                     
                             $scope.user = response;
                             $ionicLoading.hide();
                       }, 2000);
@@ -93,8 +93,11 @@
         function updateUser() {       
 
             userFactory.put($scope.user)
+         
             .success(success)
             .catch(fail);
+
+            console.log($scope.user.id);
 
             function success(response) {                
                 swal("Parabéns", 'Alterado com secesso.', "success");
@@ -105,6 +108,7 @@
                     $state.go('login');                    
                 else
                     swal("Sua requisição não pode ser processada", 'Falha na requisição.', "error");
+                    console.log(error);
             }
         }
 

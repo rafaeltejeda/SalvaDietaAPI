@@ -85,7 +85,7 @@ namespace SalvaDieta.API.Controllers
         }
 
         [HttpPut]
-        [Route("api/user")]
+        [Route("api/user/{id:int:min(1)}")]
         //[Authorize]
         public Task<HttpResponseMessage> Put(int id, [FromBody]dynamic body)
         {
@@ -99,7 +99,7 @@ namespace SalvaDieta.API.Controllers
                 number: (string)body.number,
                 district: (string)body.district,
                 city: (string)body.city,
-                zip: (string)body.zip,
+                zip: (string)body.cep,
                 state: (string)body.state,
                 homePhone: (string)body.homePhone,
                 cellPhone: (string)body.cellPhone,
