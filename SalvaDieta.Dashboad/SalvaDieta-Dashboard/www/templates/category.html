@@ -1,0 +1,55 @@
+<ion-view title="Salva Dieta" style="background-color:#78D864;">
+    <ion-content class="has-header">
+        <div>
+            <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true">
+                  <ion-slide>
+                    <div class="box">
+                         <div class=" bg-gradiente-slide-title"></div>
+                              <center><h2 class="slide-title">Prato do dia!</h2></center>
+                               <center><div class="slide-img" style="background-image: url(img/comida01.jpg);"></div></center> 
+                         
+                    </div>
+                  </ion-slide>
+                  <ion-slide>
+                    <div class="box">
+                         <div class=" bg-gradiente-slide-title"> </div>
+                              <center><h2 class="slide-title">Prato do dia!</h2></center>
+                               <center><div class="slide-img" style="background-image: url(img/comida02.jpg);"></div></center> 
+                         
+                         </div>
+                  </ion-slide>
+                  <ion-slide>
+                    <div class="box">
+                         <div class=" bg-gradiente-slide-title"></div>
+                              <center><h2 class="slide-title">Prato do dia!</h2></center>
+                              <center><div class="slide-img" style="background-image: url(img/comida03.jpg);"></div></center>                         
+                         </div>
+                  </ion-slide>
+            </ion-slide-box>
+        </div>
+        <div class="padding conteudo">
+            <div class="card">
+                 <div class="item item-text-wrap">
+
+                      <ion-list>
+                            <label class="item item-input">
+                                <i class="icon ion-search placeholder-icon"></i>
+                            <input type="search" ng-model="filter" placeholder="Pesquisar por categoria">
+                            </label>
+                      </ion-list>
+
+                      <div class="card row responsive-sm">
+                           <div class="item item-image col" ng-repeat="category in categories | filter: filter">
+                             <a ng-href="#/side-menu21/products/{{category.id}}"><img ng-src="{{category.icon}}" height="100" /></a>
+                             <h2 class="title-category-card">{{category.title}}</h2>
+                           </div>
+                      </div>
+
+                      <div class="padding" ng-show="!categories.length">
+                           <center>Sem produtos para essa categoria no momento.</center>
+                      </div>
+                 </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

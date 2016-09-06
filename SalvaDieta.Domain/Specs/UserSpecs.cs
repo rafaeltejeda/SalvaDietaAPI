@@ -10,7 +10,7 @@ namespace SalvaDieta.Domain.Specs
         public static Expression<Func<User, bool>> AuthenticateUser(string email, string password)
         {
             string encriptedPassword = StringHelper.Encrypt(password);
-            return x => x.Email == email && x.Password == encriptedPassword;
+            return x => x.Email == email && x.Password == encriptedPassword ;
         }
 
         public static Expression<Func<User, bool>> GetByEmail(string email)

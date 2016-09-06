@@ -1,13 +1,9 @@
 ﻿using Microsoft.Owin.Security.OAuth;
 using SalvaDieta.Domain.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace SalvaDieta.API.Security
 {
@@ -38,11 +34,11 @@ namespace SalvaDieta.API.Security
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
 
-            identity.AddClaim(new Claim(ClaimTypes.Name, user.Email));
-            //identity.AddClaim(new Claim(ClaimTypes.GivenName, user.Nome));
-            identity.AddClaim(new Claim(ClaimTypes.Role, user.IsAdmin ? "admin" : ""));
+            identity.AddClaim(new Claim(ClaimTypes.Email, user.Email));
+            identity.AddClaim(new Claim(ClaimTypes.GivenName, user.Name));
+            identity.AddClaim(new Claim(ClaimTypes.Role, user.Role.ToString()));
 
-            GenericPrincipal principal = new GenericPrincipal(identity, new string[] { user.IsAdmin ? "admin" : "" });
+            GenericPrincipal principal = new GenericPrincipal(identity, new string[] { user.Role.ToString() });
             Thread.CurrentPrincipal = principal;
 
             context.Validated(identity);
