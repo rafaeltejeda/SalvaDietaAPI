@@ -117,7 +117,7 @@ namespace SalvaDieta.API.Controllers
 
         [HttpDelete]
         //[Authorize]
-        [Route("api/users/{id}")]
+        [Route("api/user/{id}")]
         public Task<HttpResponseMessage> Delete(int id)
         {
             var user = _service.Delete(id);
