@@ -57,7 +57,6 @@
             }
         }
 
-
         function getByEmail(){
              userFactory.getByEmail()
              .success(success)
@@ -90,25 +89,22 @@
             }
         }
 
-        function updateUser() {       
+        function updateUser() {
 
             userFactory.put($scope.user)
          
             .success(success)
-            .catch(fail);
+            .catch(fail);            
 
-            console.log($scope.user.id);
-
-            function success(response) {                
+            function success(response) {
                 swal("Parabéns", 'Alterado com secesso.', "success");
             }
 
-            function fail(error) {                
+            function fail(error) {
                 if (error.status == 401)
                     $state.go('login');                    
                 else
-                    swal("Sua requisição não pode ser processada", 'Falha na requisição.', "error");
-                    console.log(error);
+                    swal("Sua requisição não pode ser processada", 'Falha na requisição.', "error");                    
             }
         }
 

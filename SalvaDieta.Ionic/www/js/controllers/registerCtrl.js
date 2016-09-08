@@ -2,13 +2,13 @@
     'use strict';
     angular.module('app').controller('registerCtrl', registerCtrl);
 
-    registerCtrl.$inject = ['$scope','$state','$stateParams', '$ionicLoading', '$timeout', 'registerFactory']
+    registerCtrl.$inject = ['$scope', '$rootScope','$state','$stateParams', '$ionicLoading', '$timeout', 'registerFactory']
 
-    function registerCtrl($scope, $state, $stateParams, $ionicLoading, $timeout, registerFactory) {          
+    function registerCtrl($scope, $rootScope, $state, $stateParams, $ionicLoading, $timeout, registerFactory) {          
         
         $scope.user = {
               id: 0,
-              nome: '',
+              name: '',
               email: '',
               passwordConfirmation: '',
               address: '',
@@ -40,7 +40,7 @@
                  // Setup the loader
                  $scope.loading = $ionicLoading.show({
                         content: 'Loading',
-                        template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Cadastrando...',
+                        template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Processando dados...',
                         animation: 'fade-in',
                         showBackdrop: true,
                         maxWidth: 200,
@@ -48,8 +48,7 @@
                  });
                       
                  // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
-                 $timeout(function () {
-                          
+                 $timeout(function () {                          
                           registerFactory.post($scope.user)            
                           .success(success)
                           .catch(fail);
@@ -57,12 +56,14 @@
                  }, 2000);       
                
 
-            function success(response) {             
-                     $state.go('menu.home');                        
+            function success(response) {                        
+                     $rootScope.userID = response.id;
+                     console.log($rootScope.userID);          
+                     $state.go('endereco');                        
             }
 
             function fail(error) {
-                console.log(error);
+                
                 if (error.status == 401)
                     swal("Você não tem permissão para ver essa página", 'Requisição não autorizada.', "error");
                 else
@@ -71,11 +72,13 @@
         }
 
         function saveUser() {
+            
             if ($scope.user.id == 0) {
                 addUser();
             } else {
                 updateUsert();
             }
+
         }
 
         function updateUser() {
@@ -85,12 +88,12 @@
             .catch(fail);
 
             function success(response) {
-                console.log(response);
+                
                 swal("Parabéns", 'Produto ' + response.title + ' alterado com secesso.', "success");               
             }
 
             function fail(error) {
-                console.log(error);
+                
                 if (error.status == 401)
                     swal("Você não tem permissão para ver essa página", 'Requisição não autorizada.', "error");
                 else

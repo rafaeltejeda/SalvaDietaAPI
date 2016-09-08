@@ -32,6 +32,12 @@ angular.module('app.routes', [])
     controller: 'registerCtrl'
   })
 
+  .state('endereco', {
+    url: '/endereco',
+    templateUrl: 'templates/endereco.html',
+    controller: 'enderecoCtrl'
+  })
+
   .state('menu', {
     url: '/side-menu21',
     templateUrl: 'templates/menu.html',    

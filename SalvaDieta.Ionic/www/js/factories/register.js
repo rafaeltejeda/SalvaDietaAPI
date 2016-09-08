@@ -26,7 +26,7 @@
         }
 
         function put(user) {
-            return $http.put(SETTINGS.SERVICE_URL + 'api/user/' + user.id, user, $rootScope.header);
+            return $http.put(SETTINGS.SERVICE_URL + 'api/user/' + $rootScope.userID, user, $rootScope.header);
         }
 
         function remove(user) {

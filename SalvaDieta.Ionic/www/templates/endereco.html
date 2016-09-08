@@ -1,0 +1,131 @@
+<ion-view title="Endereço" style="background-color:#78D864;">
+    <ion-content padding="true" scroll="true" class="has-header cadastro">
+        
+        <div>
+            <center><img src="img/salvadieta.svg" width="320" /></center>
+        </div>
+
+        <form name="signupForm" ng-submit="updateUser(signupForm)" class="list card no-margin" novalidate="">
+              
+              <input type="hidden" name="country" value="{{userID}}"> 
+
+              <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.CEP.$invalid && signupForm.$submitted,'no-errors' : signupForm.CEP.$valid && signupForm.$submitted}">
+                   <ion-label >CEP:</ion-label>
+                   <input type="text" name="CEP" placeholder="Seu CEP" ng-model="user.cep" ng-blur="buscaCEP()" ui-br-cep-mask required>
+              </ion-input>
+
+              <div class="error-container padding" ng-show="signupForm.CEP.$error && signupForm.$submitted" ng-messages="signupForm.CEP.$error">
+                    <div class="error assertive" ng-message="required">
+                        <i class="ion-information-circled"></i> 
+                        Campo CEP é obrigatório!
+                    </div>
+                    <div class="error assertive" ng-show="signupForm.CEP.$invalid && !signupForm.CEP.$pristine">
+                         <i class="ion-information-circled"></i> 
+                         Digite o seu CEP!
+                    </div>
+              </div>
+
+              <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.endereco.$invalid && signupForm.$submitted,'no-errors' : signupForm.endereco.$valid && signupForm.$submitted}">
+                   <ion-label >Endereço:</ion-label>
+                   <input type="text" name="endereco" placeholder="Seu endereço!" ng-model="user.logradouro" required>
+              </ion-input>
+
+              <div class="error-container padding" ng-show="signupForm.endereco.$error && signupForm.$submitted" ng-messages="signupForm.endereco.$error">
+                   <div class="error assertive" ng-message="required">
+                        <i class="ion-information-circled"></i> 
+                        Campo Endereço é obrigatório!
+                   </div>
+                   <div class="error assertive" ng-show="signupForm.endereco.$invalid && !signupForm.endereco.$pristine">
+                        <i class="ion-information-circled"></i> 
+                        Digite o seu endereço!
+                   </div>
+              </div>
+
+              <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Numero.$invalid && signupForm.$submitted,'no-errors' : signupForm.Numero.$valid && signupForm.$submitted}">
+                <ion-label >Numero:</ion-label>
+                <input type="text" name="Numero" placeholder="Digite seu Numero" ng-model="user.Numero" required>
+              </ion-input>
+
+              <div class="error-container padding" ng-show="signupForm.Numero.$error && signupForm.$submitted" ng-messages="signupForm.Numero.$error">
+                    <div class="error assertive" ng-message="required">
+                        <i class="ion-information-circled"></i> 
+                        Campo Numero é obrigatório!
+                    </div>
+                    <div class="error assertive" ng-show="signupForm.Numero.$invalid && !signupForm.Numero.$pristine">
+                        <i class="ion-information-circled"></i> 
+                        Digite o seu Numero!
+                    </div>
+              </div>
+
+              <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Complemento.$invalid && signupForm.$submitted,'no-errors' : signupForm.Complemento.$valid && signupForm.$submitted}">
+                <ion-label >Complemento:</ion-label>
+                <input type="text" name="Complemento" placeholder="Digite seu Complemento" ng-model="user.Complemento" required>
+              </ion-input>
+
+              <div class="error-container padding" ng-show="signupForm.Complemento.$error && signupForm.$submitted" ng-messages="signupForm.Complemento.$error">
+                    <div class="error assertive" ng-message="required">
+                        <i class="ion-information-circled"></i> 
+                        Campo Complemento é obrigatório!
+                    </div>
+                    <div class="error assertive" ng-show="signupForm.Complemento.$invalid && !signupForm.Complemento.$pristine">
+                        <i class="ion-information-circled"></i> 
+                        Digite o seu Complemento!
+                    </div>
+              </div>
+
+              <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Bairro.$invalid && signupForm.$submitted,'no-errors' : signupForm.Bairro.$valid && signupForm.$submitted}">
+                <ion-label >Bairro:</ion-label>
+                <input type="text" name="Bairro" placeholder="Digite seu Bairro" ng-model="user.bairro" required>
+              </ion-input>
+
+              <div class="error-container padding" ng-show="signupForm.Bairro.$error && signupForm.$submitted" ng-messages="signupForm.Bairro.$error">
+                    <div class="error assertive" ng-message="required">
+                        <i class="ion-information-circled"></i> 
+                        Campo Bairro é obrigatório!
+                    </div>
+                    <div class="error assertive" ng-show="signupForm.Bairro.$invalid && !signupForm.Bairro.$pristine">
+                        <i class="ion-information-circled"></i> 
+                        Digite o seu Bairro!
+                    </div>
+              </div>
+
+              <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Cidade.$invalid && signupForm.$submitted,'no-errors' : signupForm.Cidade.$valid && signupForm.$submitted}">
+                <ion-label >Cidade:</ion-label>
+                <input type="text" name="Cidade" placeholder="Sua Cidade" ng-model="user.cidade" required>
+              </ion-input>
+
+              <div class="error-container padding" ng-show="signupForm.Cidade.$error && signupForm.$submitted" ng-messages="signupForm.Cidade.$error">
+                    <div class="error assertive" ng-message="required">
+                        <i class="ion-information-circled"></i> 
+                        Campo Cidade é obrigatório!
+                    </div>
+                    <div class="error assertive" ng-show="signupForm.Cidade.$invalid && !signupForm.Cidade.$pristine">
+                        <i class="ion-information-circled"></i> 
+                        Digite a sua Cidade!
+                    </div>
+              </div>
+
+              <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Estado.$invalid && signupForm.$submitted,'no-errors' : signupForm.Estado.$valid && signupForm.$submitted}">
+                <ion-label >Estado:</ion-label>
+                <input type="text" name="Estado" placeholder="Seu Estado" ng-model="user.estado" required>
+              </ion-input>
+
+              <div class="error-container padding" ng-show="signupForm.Estado.$error && signupForm.$submitted" ng-messages="signupForm.Estado.$error">
+                    <div class="error assertive" ng-message="required">
+                        <i class="ion-information-circled"></i> 
+                        Campo Estado é obrigatório!
+                    </div>
+                    <div class="error assertive" ng-show="signupForm.Estado.$invalid && !signupForm.Estado.$pristine">
+                        <i class="ion-information-circled"></i> 
+                        Digite o seu Estado!
+                    </div>
+              </div>
+              
+              <ion-input class="item-input padding">
+                   <input type="submit" class="button button-balanced" value="Cadastrar" 
+                          ng-disabled="signupForm.$invalid && signupForm.$submitted">
+              </ion-input>            
+
+        </form>
+    </ion-content>
+</ion-view>
