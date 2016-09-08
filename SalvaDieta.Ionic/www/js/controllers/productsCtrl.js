@@ -10,7 +10,6 @@
         $scope.Product = {};
         $scope.ProductsCategory = [];
 
-
         activate()
 
         function activate() {

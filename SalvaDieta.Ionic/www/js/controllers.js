@@ -4,11 +4,10 @@ angular.module('app.controllers', [])
 
       $scope.toggleLeft = function() {
           $ionicSideMenuDelegate.toggleLeft();
-      };
-
-      var totalCart = 0           
+      };             
                 
       $scope.$watch(function() {
+              var totalCart = 0    
               totalCart = cartFactory.getAll().length;
               $scope.productsTotalItems = totalCart;
       });

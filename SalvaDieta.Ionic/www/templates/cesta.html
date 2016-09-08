@@ -14,7 +14,7 @@
 
                                  <img ng-src="{{product.image}}">
                                  <h2 class="title-product-list">{{product.title}}</h2>
-                                 <p>{{product.weight}} kg | R${{product.price}}</p>
+                                 <p>{{product.weight}} kg | {{product.price | currency : "R$ " : 2}} | Quantidade: {{product.quantity}}</p>
                                  <p>{{product.description}}</p>
                                  <ion-option-button class="button-calm"
                                                     ng-href="#/side-menu21/product/{{product.id}}">
@@ -28,6 +28,7 @@
                     </ion-item>
 
                 </ion-list>
+                
                 <div class="padding" ng-show="!products.length">
                     <center>Sem produtos no carrinho.</center>
                 </div>

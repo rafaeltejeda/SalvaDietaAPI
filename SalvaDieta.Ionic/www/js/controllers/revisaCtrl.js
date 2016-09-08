@@ -1,10 +1,10 @@
 (function () {
     'use strict';
-    angular.module('app').controller('cartCtrl', cartCtrl);
+    angular.module('app').controller('revisaCtrl', revisaCtrl);
 
-    cartCtrl.$inject = ['$scope', '$timeout', '$ionicLoading',  'cartFactory']
+    revisaCtrl.$inject = ['$scope', '$timeout', '$ionicLoading',  'cartFactory']
 
-    function cartCtrl($scope,  $timeout, $ionicLoading, cartFactory) {
+    function revisaCtrl($scope,  $timeout, $ionicLoading, cartFactory) {
 
           $scope.products= [];          
           activate()
@@ -12,30 +12,24 @@
           function activate() {
               getCart();
               calculateTotal()
-            
           }
 
-
-          function cart(){
-                var totalCart = 0           
-                
-                $scope.$watch(function() {
-                        totalCart = cartFactory.getAll().length;
-                        $scope.productsTotalItems = totalCart;
-                });
-          }
-
-          function calculateTotal(){
-
-                   var total = 0;
-                   $scope.products = cartFactory.getAll();
-
-                   angular.forEach($scope.products, function (item) {
-                           var sub = (item.quantity * item.price);
-                           total += sub;
-                   });
+          function calculateTotal() {
                    
-                   $scope.total = total;                   
+                    $scope.$watch(function() {
+                           var total = 0;
+                           $scope.products = cartFactory.getAll();
+
+                           angular.forEach($scope.products, function (item) {
+                                    var sub = (item.quantity * item.price);
+                                    total += sub;
+                           });
+
+                            
+                           $scope.total = total;  
+                    });
+
+                                    
           }
 
           function getCart(){
@@ -54,8 +48,9 @@
                         $scope.$watch(function() {
                               $scope.products = cartFactory.getAll();
                         });
-                        cart();
-                        $ionicLoading.hide();                  
+                        $ionicLoading.hide();
+                                 
+                  
             }, 2000);
           }
 

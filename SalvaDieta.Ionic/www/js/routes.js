@@ -96,11 +96,11 @@ angular.module('app.routes', [])
   })
 
   .state('menu.revisarOPedido', {
-    url: '/page9',
+    url: '/revisarPedido',
     views: {
       'side-menu21': {
         templateUrl: 'templates/revisarOPedido.html',
-        controller: 'revisarOPedidoCtrl'
+        controller: 'revisaCtrl'
       }
     }
   })

@@ -16,17 +16,17 @@
 
                  <p style="color:#000000;">{{product.description}}</p>
                  <p style="color:#000000; text-align:center;">
-                    Quantidade: <strong>{{product.weight}} kg</strong> | Preço: <strong>R$ {{product.price}}</strong>
+                    Quantidade: <strong>{{product.weight}} kg</strong> | Preço: <strong>{{product.price | currency : "R$ " : 2}}</strong>
                  </p>
 
                  <div class="list">
                       <label class="item item-input item-floating-label">
                          <span class="input-label">Quantidade</span>
-                         <input type="number" placeholder="Quantidade">
+                         <input type="number" placeholder="Quantidade" ng-model="product.quantity">
                       </label>
                  </div>
 
-                <button class=" button button-balanced  button-block " ng-click="addCart(product)">Comprar</button>
+                <button class="button button-balanced button-block" ng-click="addCart(product)">Comprar</button>
             </div>
         </div>
         </div>

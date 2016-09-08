@@ -55,12 +55,12 @@ namespace SalvaDieta.API.Controllers
         }
 
         [HttpPost]
-        [Route("api/user")]
         //[Authorize]
+        [Route("api/user")]       
         public Task<HttpResponseMessage> Post([FromBody]dynamic body)
         {
             var command = new RegisterUserCommand(               
-                name: (string)body.nome,                
+                name: (string)body.name,                
                 email: (string)body.email,
                 password: (string)body.passwordConfirmation,
                 address: (string)body.address,
@@ -85,8 +85,8 @@ namespace SalvaDieta.API.Controllers
         }
 
         [HttpPut]
-        [Route("api/user/{id:int:min(1)}")]
         //[Authorize]
+        [Route("api/user/{id:int:min(1)}")]        
         public Task<HttpResponseMessage> Put(int id, [FromBody]dynamic body)
         {
             var command = new UpdateUserCommand(
@@ -111,8 +111,8 @@ namespace SalvaDieta.API.Controllers
                 isAdmin: (bool)body.isAdmin
             );
 
-            var user = _service.Update(command);
-            return CreateResponse(HttpStatusCode.Created, user);
+            var userupdate = _service.Update(command);
+            return CreateResponse(HttpStatusCode.OK, userupdate);
         }
     }
 }
