@@ -111,8 +111,17 @@ namespace SalvaDieta.API.Controllers
                 isAdmin: (bool)body.isAdmin
             );
 
-            var userupdate = _service.Update(command);
-            return CreateResponse(HttpStatusCode.OK, userupdate);
+            var user = _service.Update(command);
+            return CreateResponse(HttpStatusCode.OK, user);
+        }
+
+        [HttpDelete]
+        //[Authorize]
+        [Route("api/users/{id}")]
+        public Task<HttpResponseMessage> Delete(int id)
+        {
+            var user = _service.Delete(id);
+            return CreateResponse(HttpStatusCode.OK, user);
         }
     }
 }
