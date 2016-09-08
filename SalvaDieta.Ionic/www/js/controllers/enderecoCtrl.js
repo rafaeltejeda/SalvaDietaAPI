@@ -7,7 +7,7 @@
     function enderecoCtrl($scope, $rootScope, $state, $stateParams, $ionicLoading, $timeout, registerFactory, cepFactory) {          
         
         $scope.user = {
-              id: $rootScope.userID,
+              id: 0,
               address: '',
               complement: '',
               number: '',
@@ -20,9 +20,7 @@
         }
 
         $scope.buscaCEP = getZip;
-        $scope.updateUser = update; 
-        $scope.userID = $rootScope.userID;
-        console.log($rootScope.userID);
+        $scope.updateUser = update;      
 
         activate()
 

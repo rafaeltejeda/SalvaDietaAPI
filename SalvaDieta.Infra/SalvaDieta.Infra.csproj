@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201608240137090_Banco-Zero.Designer.cs">
       <DependentUpon>201608240137090_Banco-Zero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609082322566_remove_isadmin.cs" />
+    <Compile Include="Migrations\201609082322566_remove_isadmin.Designer.cs">
+      <DependentUpon>201609082322566_remove_isadmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pesistence\DataContexts\SalvaDietaDataContext.cs" />
     <Compile Include="IUnitOfWork.cs" />
@@ -83,6 +87,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201608240137090_Banco-Zero.resx">
       <DependentUpon>201608240137090_Banco-Zero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609082322566_remove_isadmin.resx">
+      <DependentUpon>201609082322566_remove_isadmin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

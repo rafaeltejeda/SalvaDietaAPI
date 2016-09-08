@@ -20,6 +20,7 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.ApplicationService\bi
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.ApplicationService\obj\Debug\SalvaDieta.ApplicationService.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.ApplicationService\obj\Debug\SalvaDieta.ApplicationService.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.ApplicationService\obj\Debug\SalvaDieta.ApplicationService.pdb
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\obj\Debug\SalvaDieta.ApplicationService.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\bin\Debug\SalvaDieta.ApplicationService.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\bin\Debug\SalvaDieta.ApplicationService.pdb
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\bin\Debug\Microsoft.Owin.dll
@@ -39,6 +40,5 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\bin\Debug\System.Web.Http.xml
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\bin\Debug\EntityFramework.xml
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\obj\Debug\SalvaDieta.ApplicationService.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\obj\Debug\SalvaDieta.ApplicationService.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.ApplicationService\obj\Debug\SalvaDieta.ApplicationService.pdb

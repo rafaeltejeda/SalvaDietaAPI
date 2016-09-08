@@ -26,10 +26,7 @@ namespace SalvaDieta.Infra.Pesistence.Map
                 .IsRequired();
 
             Property(x => x.LastLoginDate);
-            Property(x => x.Role);
-
-            Property(x => x.IsAdmin)
-                .IsRequired();
+            Property(x => x.Role);            
         }
     }
 }

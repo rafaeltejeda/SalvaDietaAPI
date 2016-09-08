@@ -25,8 +25,8 @@ namespace SalvaDieta.Domain.Entities
                     string facebook,
                     string twitter,
                     string instagram,
-                    string youTube,                    
-                    bool isAdmin)
+                    string youTube                    
+                    )
         {
             this.Name = name;
             this.Email = email;
@@ -46,7 +46,6 @@ namespace SalvaDieta.Domain.Entities
             this.Instagram = instagram;
             this.YouTube = youTube;
             this.Role = ERole.Customer;
-            this.IsAdmin = isAdmin;
             this.LastLoginDate = DateTime.Now;
             this.Joined = DateTime.Now;
         }
@@ -69,8 +68,7 @@ namespace SalvaDieta.Domain.Entities
         public string Twitter { get; private set; }
         public string Instagram { get; private set; }
         public string YouTube { get; private set; }
-        public ERole Role { get; private set; }
-        public bool IsAdmin { get; private set; }
+        public ERole Role { get; private set; }        
         public DateTime LastLoginDate { get; private set; }
         public DateTime Joined { get; private set; }
 
@@ -104,21 +102,13 @@ namespace SalvaDieta.Domain.Entities
                     string facebook,
                     string twitter,
                     string instagram,
-                    string youTube,
-                    bool isAdmin)
+                    string youTube
+                    )
         {
             if (!this.UpdateScopeIsValid())
                 return;
         }
 
-        public void GrantAdmin()
-        {
-            this.IsAdmin = true;
-        }
-
-        public void RevokeAdmin()
-        {
-            this.IsAdmin = false;
-        }
+      
     }
 }

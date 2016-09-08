@@ -37,8 +37,7 @@ namespace SalvaDieta.ApplicationService
                                 command.Facebook,
                                 command.Twitter,
                                 command.Instagram,
-                                command.YouTube,                                
-                                command.IsAdmin
+                                command.YouTube
                                );
             user.Register();
             _repository.Register(user);
@@ -70,8 +69,7 @@ namespace SalvaDieta.ApplicationService
                             command.Facebook,
                             command.Twitter,
                             command.Instagram,
-                            command.YouTube,
-                            command.IsAdmin);
+                            command.YouTube);
             _repository.Update(user);
 
             if (Commit())

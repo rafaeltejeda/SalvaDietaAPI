@@ -76,8 +76,7 @@ namespace SalvaDieta.API.Controllers
                 facebook: (string)body.facebook,
                 twitter: (string)body.twitter,
                 instagram: (string)body.instagram,
-                youTube: (string)body.youTube,
-                isAdmin: (bool)body.isAdmin
+                youTube: (string)body.youTube               
             );
 
             var user = _service.Register(command);
@@ -107,8 +106,7 @@ namespace SalvaDieta.API.Controllers
                 facebook: (string)body.facebook,
                 twitter: (string)body.twitter,
                 instagram: (string)body.instagram,
-                youTube: (string)body.youtube,
-                isAdmin: (bool)body.isAdmin
+                youTube: (string)body.youtube               
             );
 
             var user = _service.Update(command);

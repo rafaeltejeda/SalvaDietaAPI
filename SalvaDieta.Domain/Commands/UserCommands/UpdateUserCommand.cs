@@ -6,25 +6,25 @@ namespace SalvaDieta.Domain.Commands.UserCommands
     public class UpdateUserCommand
     {
         public UpdateUserCommand(
-               int id,
-               string name,
-               string email,
-               string password,
-               string address,
-               string complement,
-               string number,
-               string district,
-               string city,
-               string zip,
-               string state,
-               string homePhone,
-               string cellPhone,
-               string photo,
-               string facebook,
-               string twitter,
-               string instagram,
-               string youTube,              
-               bool isAdmin)
+                                   int id,
+                                   string name,
+                                   string email,
+                                   string password,
+                                   string address,
+                                   string complement,
+                                   string number,
+                                   string district,
+                                   string city,
+                                   string zip,
+                                   string state,
+                                   string homePhone,
+                                   string cellPhone,
+                                   string photo,
+                                   string facebook,
+                                   string twitter,
+                                   string instagram,
+                                   string youTube      
+                                )
         {
             this.Id = id;
             this.Name = name;
@@ -45,7 +45,6 @@ namespace SalvaDieta.Domain.Commands.UserCommands
             this.Instagram = instagram;
             this.YouTube = youTube;
             this.Role = ERole.Customer;
-            this.IsAdmin = isAdmin;
             this.LastLoginDate = DateTime.Now;
             this.Joined = DateTime.Now;
         }
@@ -69,7 +68,6 @@ namespace SalvaDieta.Domain.Commands.UserCommands
         public string Instagram { get; private set; }
         public string YouTube { get; private set; }
         public ERole Role { get; private set; }
-        public bool IsAdmin { get; private set; }
         public DateTime LastLoginDate { get; private set; }
         public DateTime Joined { get; private set; }
     }
