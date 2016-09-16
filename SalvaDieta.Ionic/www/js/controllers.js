@@ -86,7 +86,10 @@ angular.module('app.controllers', [])
 })
 
 .controller('agendamentoDoPedidoCtrl', function($scope) {
-
+    $scope.IsHidden = true;
+    $scope.ShowHide = function () {
+           $scope.IsHidden = $scope.IsHidden ? false : true;
+   }
 })
 
 .controller('revisarOPedidoCtrl', function($scope) {

@@ -3,7 +3,7 @@
         <div class="">
              <center><img src="img/salvadieta.svg" width="320"></center>
         </div>
-        <div class="list card " id="agendamentoDoPedido-card20">
+        <div class="list card">
             <div class="item item-divider">Horário de Entrega</div>
             <div class="item item-body">
                 <p id="agendamentoDoPedido-markdown9" style="color:#000000;text-align:center;" class=" ">No máximo
@@ -22,26 +22,57 @@
                 </form>
             </div>
         </div>
-        <form id="agendamentoDoPedido-form11" class="list ">
-            <div class="list card " id="agendamentoDoPedido-card10">
+        
+       
+        <div class="list card ">
+             <div class="item item-divider">Convênio</div>
+             <div class="item item-body">
+                                   
+                  <ion-checkbox class="checkbox-balanced balanced"
+                                   ng-click="ShowHide()">
+                                   possui convênio?
+                  </ion-checkbox>
+
+                  <div ng-hide = "IsHidden">
+                       <p>Selecione uma academia:</p>  
+                       <div class="list">
+
+                            <label class="item item-input item-select">
+                                <div class="input-label">
+                                </div>
+                                <select>
+                                    <option>Academia 01</option>                               
+                                    <option>Academia 02</option>
+                                </select>
+                            </label>
+
+                       </div>                      
+                   </div>
+
+             </div>
+        </div>            
+       
+
+        <div class="list ">
+            <div class="list card ">
                 <div class="item item-divider">Endereço de Entrega</div>
                 <div class="item item-body">
-                    <form id="agendamentoDoPedido-form12" class="list "></form>
-                    <p id="agendamentoDoPedido-markdown10" style="color:#000000;" class=" ">
-                        <strong>CEP :</strong>00000-000</p>
-                    <p id="agendamentoDoPedido-markdown25" style="color:#000000;" class=" ">
-                        <strong>Rua :</strong>Endereço de não sei onde, nº90</p>
-                    <p id="agendamentoDoPedido-markdown30" style="color:#000000;" class=" ">
-                        <strong>Bairro :</strong>Um lugar ai</p>
-                    <p id="agendamentoDoPedido-markdown15" style="color:#000000;" class=" ">
-                        <strong>Cidade :</strong>Piracicaba - SP</p>
+                   
+                    <p  style="color:#000000;">
+                        <strong>CEP :</strong></p>
+                    <p  style="color:#000000;">
+                        <strong>Rua :</strong></p>
+                    <p  style="color:#000000;">
+                        <strong>Bairro :</strong></p>
+                    <p  style="color:#000000;">
+                        <strong>Cidade :</strong></p>
                     <div class="spacer" style="width: 251px; height: 28px;"></div>
-                    <div id="agendamentoDoPedido-button-bar4" class=" button-bar ">
-                        <a ui-sref="menu.configuraEs" id="agendamentoDoPedido-button11" class=" button button-stable  button-block ">Alterar Endereço</a>
+                    <div class=" button-bar ">
+                        <a ui-sref="menu.configuraEs" class=" button button-balanced button-block ">Alterar Endereço</a>
                     </div>
                 </div>
             </div>
             <a ui-sref="menu.revisarOPedido" class=" button button-balanced button-block ">Avançar</a>
-        </form>
+        </div>
     </ion-content>
 </ion-view>

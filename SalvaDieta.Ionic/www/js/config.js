@@ -6,8 +6,8 @@
         'CURR_ENV': 'dev',
         'AUTH_TOKEN': 'salvadieta-token',
         'AUTH_USER': 'salvadieta-user',
-        'SERVICE_URL': 'http://localhost:55568/'
-        //'SERVICE_URL': 'http://salvadieta.azurewebsites.net/'
+        //'SERVICE_URL': 'http://localhost:55568/'
+        'SERVICE_URL': 'http://salvadieta.azurewebsites.net/'
     });    
 
     angular.module('app').run(function ($rootScope, $location, SETTINGS, cartFactory) {

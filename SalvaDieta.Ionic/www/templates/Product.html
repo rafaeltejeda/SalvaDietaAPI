@@ -16,17 +16,33 @@
 
                  <p style="color:#000000;">{{product.description}}</p>
                  <p style="color:#000000; text-align:center;">
-                    Quantidade: <strong>{{product.weight}} kg</strong> | Preço: <strong>{{product.price | currency : "R$ " : 2}}</strong>
+                   Peso: <strong>{{product.weight}} kg</strong> | Preço: <strong>{{product.price | currency : "R$ " : 2}}</strong>
                  </p>
+                 
+                  <center>
+                      <div>
+                            <p class="input-label">Quantidade:</p>
 
-                 <div class="list">
-                      <label class="item item-input item-floating-label">
-                         <span class="input-label">Quantidade</span>
-                         <input type="number" placeholder="Quantidade" ng-model="product.quantity">
-                      </label>
-                 </div>
+                           <div range-spinner
+                                range-min="1" 
+                                range-step="1"  
+                                range-max="20" 
+                                range-default-value="1"
+                                range-decimal-precision="1"				
+                                range-model="qtd"
+                                accept-decimal=false
+                                name-of-field="qtd"
+                                id-of-field="qtd">
+                           </div>
 
-                <button class="button button-balanced button-block" ng-click="addCart(product)">Comprar</button>
+                           
+                           <input type="hidden" name="country" value="Norway">
+                      </div>
+                 </center>
+                 
+                 <br /> <br /> <br />              
+                
+                 <button class="button button-balanced button-block" ng-click="addCart(product)">Comprar</button>
             </div>
         </div>
         </div>

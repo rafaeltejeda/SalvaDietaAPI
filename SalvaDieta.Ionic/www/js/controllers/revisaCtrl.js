@@ -18,14 +18,25 @@
                    
                     $scope.$watch(function() {
                            var total = 0;
+                           var desc10 = 0;
+                           var desc20 = 0;
+
                            $scope.products = cartFactory.getAll();
 
                            angular.forEach($scope.products, function (item) {
-                                    var sub = (item.quantity * item.price);
-                                    total += sub;
-                           });
+                                  
+                                  var sub = (item.quantity * item.price);                                  
+                                  total += sub;
 
-                            
+                                  var desc = (sub - sub*0.1);
+                                  desc10 += desc;
+
+                                  var desc2 = (sub - sub*0.2);
+                                  desc20 += desc2;
+                           });
+                           
+                           $scope.desc20 = desc20; 
+                           $scope.desc10 = desc10; 
                            $scope.total = total;  
                     });
 
@@ -45,10 +56,11 @@
 
             // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
             $timeout(function () {                  
-                        $scope.$watch(function() {
-                              $scope.products = cartFactory.getAll();
-                        });
-                        $ionicLoading.hide();
+            $scope.$watch(function() {
+                   $scope.products = cartFactory.getAll();
+                              
+                   });
+                   $ionicLoading.hide();
                                  
                   
             }, 2000);

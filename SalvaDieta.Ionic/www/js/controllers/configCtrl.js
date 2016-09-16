@@ -44,7 +44,7 @@
                       // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
                       $timeout(function () {
                             $scope.user = response;
-                            $scope.address = response.logradouro;
+                            $scope.address = response.logradouro;                            
                             $ionicLoading.hide();
                       }, 2000);
              }
@@ -54,7 +54,7 @@
                            swal("Você não tem permissão para ver essa página", 'Requisição não autorizada.', "error");
                       else
                       swal("Sua requisição não pode ser processada", 'o CEP está incorreto.', "error");
-            }
+             }
         }
 
         function getByEmail(){
@@ -75,7 +75,8 @@
                       });
 
                       // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
-                      $timeout(function () {                     
+                      $timeout(function () {
+                                       
                             $scope.user = response;
                             $ionicLoading.hide();
                       }, 2000);

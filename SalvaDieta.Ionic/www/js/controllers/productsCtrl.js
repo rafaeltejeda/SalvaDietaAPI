@@ -9,6 +9,8 @@
         $scope.Products = [];
         $scope.Product = {};
         $scope.ProductsCategory = [];
+  
+       $scope.qtd = 0;
 
         activate()
 
@@ -27,12 +29,12 @@
 
                     // Setup the loader
                     $scope.loading = $ionicLoading.show({
-                            content: 'Loading',
-                            template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Carregando...',
-                            animation: 'fade-in',
-                            showBackdrop: true,
-                            maxWidth: 200,
-                            showDelay: 0
+                           content: 'Loading',
+                           template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Carregando...',
+                           animation: 'fade-in',
+                           showBackdrop: true,
+                           maxWidth: 200,
+                           showDelay: 0
                     });
 
                     // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
@@ -118,10 +120,9 @@
         }
 
         $scope.addCart = function(product){
-            cartFactory.add(product);
-
-            var totalItems = cartFactory.getAll().length;
-            $scope.productsTotalItems = totalItems;
+            
+            $scope.product.quantity = qtd.value;
+            cartFactory.add(product);            
 
             $location.path('side-menu21/cesta');
         }

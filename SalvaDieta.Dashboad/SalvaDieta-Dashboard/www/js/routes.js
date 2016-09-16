@@ -39,14 +39,38 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-  .state('menu.localizacao', {
-    url: '/localizacao',
-    templateUrl: 'templates/localizaO.html',
-    controller: 'localizaOCtrl'
+  .state('menu.pedidos', {
+    url: '/pedidos',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/pedidos.html',
+        controller: 'pedidosCtrl'
+      }
+    }
+  })
+  
+  .state('menu.clientes', {
+    url: '/clientes',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/clientes.html',
+        controller: 'clientesCtrl'
+      }
+    }
   })
 
   .state('menu.category', {
     url: '/category',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/category.html',
+        controller: 'categoryCtrl'
+      }
+    }
+  })
+
+  .state('menu.categoryId', {
+    url: '/category/:id',
     views: {
       'side-menu21': {
         templateUrl: 'templates/category.html',
@@ -75,6 +99,46 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.descontos', {
+    url: '/descontos',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/descontos.html',
+        controller: 'descontosCtrl'
+      }
+    }
+  })
+
+  .state('menu.descontosId', {
+    url: '/descontos/:id',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/descontos.html',
+        controller: 'descontosCtrl'
+      }
+    }
+  })
+
+  .state('menu.promocoes', {
+    url: '/promocoes',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/promocoes.html',
+        controller: 'promocoesCtrl'
+      }
+    }
+  })
+
+  .state('menu.promocoesId', {
+    url: '/promocoes/:id',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/promocoes.html',
+        controller: 'promocoesCtrl'
+      }
+    }
+  }) 
+
   .state('menu.cesta', {
     url: '/cesta',
     views: {
@@ -83,42 +147,6 @@ angular.module('app.routes', [])
         controller: 'cartCtrl'
       }
     }
-  })
-
-  .state('menu.agendamentoDoPedido', {
-    url: '/agendamentoDoPedido',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/agendamentoDoPedido.html',
-        controller: 'agendamentoDoPedidoCtrl'
-      }
-    }
-  })
-
-  .state('menu.revisarOPedido', {
-    url: '/page9',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/revisarOPedido.html',
-        controller: 'revisarOPedidoCtrl'
-      }
-    }
-  })
-
-  .state('menu.finalizarPedido', {
-    url: '/page14',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/finalizarPedido.html',
-        controller: 'finalizarPedidoCtrl'
-      }
-    }
-  })
-
-  .state('menu.historico', {
-    url: '/historico',
-    templateUrl: 'templates/historico.html',
-    controller: 'histRicoCtrl'
   })
 
   .state('menu.configuracoes', {
@@ -141,6 +169,6 @@ angular.module('app.routes', [])
     }
   })
 
-$urlRouterProvider.otherwise('/side-menu21/home')  
+  $urlRouterProvider.otherwise('/side-menu21/home')  
 
 });

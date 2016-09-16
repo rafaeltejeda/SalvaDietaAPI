@@ -18,6 +18,8 @@ namespace SalvaDieta.Infra.Persistence.DataContexts
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Day> Days { get; set; }
+        public DbSet<Hour> Hours { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -27,6 +29,8 @@ namespace SalvaDieta.Infra.Persistence.DataContexts
             modelBuilder.Configurations.Add(new ProductMap());
             modelBuilder.Configurations.Add(new OrderMap());
             modelBuilder.Configurations.Add(new OrderItemMap());
+            modelBuilder.Configurations.Add(new DayMap());
+            modelBuilder.Configurations.Add(new HourMap());
         }
     }
 }

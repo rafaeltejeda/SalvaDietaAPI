@@ -44,12 +44,18 @@
     <Compile Include="Commands\CategoryCommands\UpdateCategoryCommand.cs" />
     <Compile Include="Commands\CityCommands\CreateCityCommand.cs" />
     <Compile Include="Commands\CityCommands\UpdateCityCommand.cs" />
+    <Compile Include="Commands\DayCommands\CreateDayCommand.cs" />
+    <Compile Include="Commands\DayCommands\UpdateDayCommand.cs" />
+    <Compile Include="Commands\HourCommands\CreateHourCommand.cs" />
+    <Compile Include="Commands\HourCommands\UpdateHourCommand.cs" />
     <Compile Include="Commands\OrderCommands\CreateOrderCommand.cs" />
     <Compile Include="Commands\OrderCommands\CreateOrderItemCommand.cs" />
     <Compile Include="Commands\ProductCommands\CreateProductCommand.cs" />
     <Compile Include="Commands\ProductCommands\UpdateProductCommand.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\City.cs" />
+    <Compile Include="Entities\Day.cs" />
+    <Compile Include="Entities\Hour.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderItem.cs" />
     <Compile Include="Entities\Product.cs" />
@@ -63,22 +69,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICategoryRepository.cs" />
     <Compile Include="Repositories\ICityRepository.cs" />
+    <Compile Include="Repositories\IDayRepository.cs" />
+    <Compile Include="Repositories\IHourRepository.cs" />
     <Compile Include="Repositories\IOrderRepository.cs" />
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Scopes\CategoryScopes.cs" />
     <Compile Include="Scopes\CityScopes.cs" />
+    <Compile Include="Scopes\DayScopes.cs" />
+    <Compile Include="Scopes\HourScope.cs" />
     <Compile Include="Scopes\OrderItemScopes.cs" />
     <Compile Include="Scopes\OrderScopes.cs" />
     <Compile Include="Scopes\ProductScopes.cs" />
     <Compile Include="Scopes\UserScopes.cs" />
     <Compile Include="Services\ICategoryApplicationService.cs" />
     <Compile Include="Services\ICityApplicationService.cs" />
+    <Compile Include="Services\IDayApplicationService.cs" />
+    <Compile Include="Services\IHourApplicationService.cs" />
     <Compile Include="Services\IOrderApplicationService.cs" />
     <Compile Include="Services\IProductApplicationService.cs" />
     <Compile Include="Services\IUserApplicationService.cs" />
     <Compile Include="Specs\CategorySpecs.cs" />
     <Compile Include="Specs\CitySpecs.cs" />
+    <Compile Include="Specs\DaySpecs.cs" />
+    <Compile Include="Specs\HourSpecs.cs" />
     <Compile Include="Specs\OrderSpecs.cs" />
     <Compile Include="Specs\ProductSpecs.cs" />
     <Compile Include="Specs\UserSpecs.cs" />
@@ -92,6 +106,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

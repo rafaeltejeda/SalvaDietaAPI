@@ -27,6 +27,19 @@
           margin: 0 auto; 
       }
 
+      .slide-img{
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -khtml-background-size: cover;
+        -moz-background-size: cover;
+        background-position: center;
+        height: 600px;
+        width: 100%;
+     }
+
 }
 
 /* ----------- Retina Screens ----------- */
@@ -59,6 +72,19 @@
           margin: 0 auto;  
       }
 
+      .slide-img{
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -khtml-background-size: cover;
+        -moz-background-size: cover;
+        background-position: center;
+        height: 600px;
+        width: 100%;
+     }
+
 }
 
 /* ----------- Non-Retina Screens ----------- */
@@ -89,6 +115,19 @@
           width: 1300px !important;
           margin: 0 auto; 
       }
+
+      .slide-img{
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -khtml-background-size: cover;
+        -moz-background-size: cover;
+        background-position: center;
+        height: 730px;
+        width: 100%;
+     }
 
 }
 
@@ -121,5 +160,18 @@
           width: 1300px !important;
           margin: 0 auto; 
       }
+
+      .slide-img{
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -khtml-background-size: cover;
+        -moz-background-size: cover;
+        background-position: center;
+        height: 700px;
+        width: 100%;
+     }
 
 }

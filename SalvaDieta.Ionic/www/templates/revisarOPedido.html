@@ -6,12 +6,12 @@
             <div class="item item-body">                
                 <ul class="">
                     <li class="" ng-repeat="product in products">                       
-                        <p>{{product.title}} - <strong>{{product.weight}} kg</strong> |  <strong>R${{product.price | currency : "R$ " : 2}}</strong> |  <strong>Quantidade: {{product.quantity}}</strong></p>     
+                        <p>{{product.title}} - <strong>{{product.weight}} kg</strong> |  <strong>{{product.price | currency : "R$ " : 2}}</strong> |  <strong>Qtd: {{product.quantity}}</strong></p>     
                     </li>
                 </ul>
                 
                 <p id="revisarOPedido-markdown13" style="color:#000000;" class=" ">Valor total:
-                   <strong>{{total | currency : "R$ " : 2}}</strong>
+                   <strong>{{total | currency : "R$ " : 2}}</strong> <strong>{{desc10 | currency : "10% R$ " : 2}}</strong> <strong>{{desc20 | currency : "20% R$ " : 2}}</strong>
                 </p>
             </div>
         </div>

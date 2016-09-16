@@ -2,9 +2,9 @@
     'use strict';
     angular.module('app').controller('cartCtrl', cartCtrl);
 
-    cartCtrl.$inject = ['$scope', '$timeout', '$ionicLoading',  'cartFactory']
+    cartCtrl.$inject = ['$scope', '$location', '$timeout', '$ionicLoading',  'cartFactory']
 
-    function cartCtrl($scope,  $timeout, $ionicLoading, cartFactory) {
+    function cartCtrl($scope, $location, $timeout, $ionicLoading, cartFactory) {
 
           $scope.products= [];          
           activate()
@@ -13,6 +13,11 @@
               getCart();
               calculateTotal()
             
+          }
+      
+         
+          $scope.editarProduto = function(product){            
+                 $location.path('side-menu21/product/' + product.id);
           }
 
 

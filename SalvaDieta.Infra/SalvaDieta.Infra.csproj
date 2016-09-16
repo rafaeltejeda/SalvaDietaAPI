@@ -57,11 +57,17 @@
     <Compile Include="Migrations\201609082322566_remove_isadmin.Designer.cs">
       <DependentUpon>201609082322566_remove_isadmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609152118366_Create_database_Day_Hour.cs" />
+    <Compile Include="Migrations\201609152118366_Create_database_Day_Hour.Designer.cs">
+      <DependentUpon>201609152118366_Create_database_Day_Hour.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pesistence\DataContexts\SalvaDietaDataContext.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Pesistence\Map\CategoryMap.cs" />
     <Compile Include="Pesistence\Map\CityMap.cs" />
+    <Compile Include="Pesistence\Map\DayMap.cs" />
+    <Compile Include="Pesistence\Map\HourMap.cs" />
     <Compile Include="Pesistence\Map\OrderItemMap.cs" />
     <Compile Include="Pesistence\Map\OrderMap.cs" />
     <Compile Include="Pesistence\Map\ProductMap.cs" />
@@ -69,6 +75,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\CityRepository.cs" />
+    <Compile Include="Repositories\DayRepository.cs" />
+    <Compile Include="Repositories\HourRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
@@ -90,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609082322566_remove_isadmin.resx">
       <DependentUpon>201609082322566_remove_isadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609152118366_Create_database_Day_Hour.resx">
+      <DependentUpon>201609152118366_Create_database_Day_Hour.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
