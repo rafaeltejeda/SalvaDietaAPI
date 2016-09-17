@@ -25,8 +25,6 @@ namespace SalvaDieta.Domain.Entities
         public bool Active { get; private set; }
         public bool Reserved { get; private set; }
 
-        public int HourId { get; set; }
-        public Hour Hour { get; set; }
         public ICollection<Hour> Hours { get; private set; }
 
         public void Create()

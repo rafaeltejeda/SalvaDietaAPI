@@ -32,4 +32,3 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\Sa
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.csproj.GenerateResource.Cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.pdb
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.Infra\obj\Debug\SalvaDieta.Infra.Migrations.up_banco.resources
