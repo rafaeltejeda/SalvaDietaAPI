@@ -1,0 +1,27 @@
+<ion-view title="Login" id="page2" style="background-color:#78D864;" class=" ">
+    <ion-content padding="true" scroll="true" class="has-header login">
+        <div class="">
+            <center><img src="img/salvadieta.svg" width="320" /></center>
+        </div>
+        <form class="list">
+            <div class="card">
+                 <label class="item item-input">
+                        <input type="email" ng-model="login.email" placeholder="Login">
+                 </label>
+                 <label class="item item-input">
+                        <input type="password" ng-model="login.password" placeholder="Senha">
+                 </label>
+                 <button ng-click="submit()" class=" button button-stable button-block " type="submit">Acessar</button>
+            </div>
+        </form>
+        <p style="color:#FFFFFF; text-align:center;">
+            Acesse também com suas
+            <strong>REDES SOCIAIS</strong>
+        </p>
+        <div id="login-button-bar1" class=" button-bar ">            
+             <button id="login-button2" class=" button button-positive  button-block icon ion-social-facebook "></button>
+             <button id="login-button3" class=" button button-assertive  button-block icon ion-social-googleplus "></button>
+        </div>
+        <button ui-sref="register" id="login-button15" class=" button button-stable  button-block ">Cadastrar</button>
+    </ion-content>
+</ion-view>

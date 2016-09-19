@@ -1,0 +1,30 @@
+
+.rangespinner{
+    width: 210px;
+    margin: 0 auto;
+}
+.rangespinner input[type="text"] {
+    border: 1px solid #ccc;
+    color: #fb730d;
+    float: left;
+    font-size: 14px;
+    height: 45px;
+    text-align: center;
+    width: 100px;
+	border-radius:2px !important;
+}
+
+.rangespinner input[type="text"]:focus{
+    outline : none;
+}
+
+.rangespinner button[type="button"] {
+    cursor: pointer;
+    float: left;
+}
+
+
+.rangespinner input:focus,
+.rangespinner button:focus {
+	outline: none;
+}

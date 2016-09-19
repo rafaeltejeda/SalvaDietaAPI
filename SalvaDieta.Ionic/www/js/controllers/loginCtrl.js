@@ -13,7 +13,7 @@ function loginCtrl($scope, $state, $rootScope, SETTINGS, $timeout, $ionicLoading
         $scope.submit = login;
 
         function login() {
-           
+            
             accountFactory.login($scope.login)
                 .success(success)
                 .catch(fail);
@@ -23,17 +23,19 @@ function loginCtrl($scope, $state, $rootScope, SETTINGS, $timeout, $ionicLoading
                 $rootScope.user = $scope.login.email;
                 $rootScope.token = response.access_token;
                 
-                sessionStorage.setItem(SETTINGS.AUTH_TOKEN, response.access_token);                
-                localStorage.setItem(SETTINGS.USER_LOGADO, $rootScope.userName);
+                sessionStorage.setItem(SETTINGS.AUTH_TOKEN, response.access_token);
+                sessionStorage.setItem(SETTINGS.AUTH_USER, $rootScope.user);
+
+                localStorage.setItem(SETTINGS.USER_LOGADO, $rootScope.logado);      
 
                 userFactory.getByEmail()
                 .success(success)
                 .catch(fail);
 
                 function success(response) {
-                        
+                        console.log(response)
                         $scope.user = response;                                
-                        localStorage.setItem(SETTINGS.USER_NAME, response.name);
+                        localStorage.setItem(SETTINGS.USER_NAME, response);
                         
                         $state.go('menu.home');
                 }

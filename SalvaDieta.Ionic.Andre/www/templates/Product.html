@@ -1,0 +1,50 @@
+<ion-view title="{{product.title}}" id="page11" style="background-color:#78D864;">
+    <ion-content padding="true" class="has-header ">
+        <div style="text-align: center; background-color: rgb(232, 235, 239);">
+          <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true">
+                <ion-slide>
+                  <div class="box blue">
+                       <center><img ng-src="{{product.image}}" widht="100%" alt=""/></center>
+                  </div>
+                </ion-slide>
+          </ion-slide-box>
+        </div>
+        <div class="conteudo">
+        <div class="card">
+            <div class="item item-divider">{{product.title}}</div>
+            <div class="item item-body">
+
+                 <p style="color:#000000;">{{product.description}}</p>
+                 <p style="color:#000000; text-align:center;">
+                   Peso: <strong>{{product.weight}} kg</strong> | Preço: <strong>{{product.price | currency : "R$ " : 2}}</strong>
+                 </p>
+                 
+                  <center>
+                      <div>
+                            <p class="input-label">Quantidade:</p>
+
+                           <div range-spinner
+                                range-min="1" 
+                                range-step="1"  
+                                range-max="20" 
+                                range-default-value="1"
+                                range-decimal-precision="1"				
+                                range-model="qtd"
+                                accept-decimal=false
+                                name-of-field="qtd"
+                                id-of-field="qtd">
+                           </div>
+
+                           
+                           <input type="hidden" name="country" value="Norway">
+                      </div>
+                 </center>
+                 
+                 <br /> <br /> <br />              
+                
+                 <button class="button button-balanced button-block" ng-click="addCart(product)">Comprar</button>
+            </div>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -44,10 +44,20 @@ namespace SalvaDieta.API.Controllers
             return CreateResponse(HttpStatusCode.OK, users);
         }
 
-        [HttpGet]
+        [HttpPost]
         //[Authorize]
         [Route("api/user/email")]
         public Task<HttpResponseMessage> GetByEmail()
+        {
+            var email = User.Identity.Name;
+            var result = _service.GetByEmail(email);
+            return CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        [HttpGet]
+        [Authorize]
+        [Route("api/users/info")]
+        public Task<HttpResponseMessage> GetByToken()
         {
             var email = User.Identity.Name;
             var result = _service.GetByEmail(email);

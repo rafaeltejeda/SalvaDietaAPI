@@ -1,0 +1,68 @@
+<ion-view title="Revisar o Pedido" id="page9" style="background-color:#78D864;" class=" ">
+    <ion-content padding="true" class="has-header conteudo">
+        <form>
+        <div class="list card">
+            <div class="item item-divider">Seu pedido</div>
+            <div class="item item-body">                
+                <ul class="">
+                    <li class="" ng-repeat="product in products">                       
+                        <p>{{product.title}} - <strong>{{product.weight}} kg</strong> |  <strong>{{product.price | currency : "R$ " : 2}}</strong> |  <strong>Qtd: {{product.quantity}}</strong></p>     
+                    </li>
+                </ul>
+                
+                <p id="revisarOPedido-markdown13" style="color:#000000;" class=" ">Valor total:
+                   <strong>{{total | currency : "R$ " : 2}}</strong> <strong>{{desc10 | currency : "10% R$ " : 2}}</strong> <strong>{{desc20 | currency : "20% R$ " : 2}}</strong>
+                </p>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Pagamento em Dinheiro</div>
+            <div class="item item-body">
+                <div class="list ">
+                    <p style="color:#000000;" class=" ">Valor total:
+                       <strong>{{total | currency : "R$ " : 2}}</strong>
+                    </p>
+                    <div class="spacer" style="width: 251px; height: 21px;"></div>
+                    <label class="item item-input " id="revisarOPedido-input14">
+                        <span class="input-label">R$</span>
+                        <input type="text" placeholder="Troco para?">
+                    </label>
+                    <div class="spacer" style="width: 251px; height: 9px;"></div>
+                    <div id="revisarOPedido-button-bar5" class=" button-bar ">
+                        <a ui-sref="menu.finalizarPedido" id="revisarOPedido-button16" class=" button button-balanced button-block ">Finalizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Pagamento em Cartão</div>
+            <div class="item item-body">                                
+
+                 <p style="color:#000000;">
+                    Valor total: <strong>{{total | currency : "R$ " : 2}}</strong>
+                 </p>      
+                 
+                <ion-list>
+                    <ion-radio class="balanced" ng-model="choice" ng-value="'Crédito'">Crédito</ion-radio>
+                    <ion-radio class="balanced" ng-model="choice" ng-value="'Débito'">Débito</ion-radio>
+                </ion-list> 
+
+                <div class="list">
+                    <label class="item item-select">
+                        <span class="input-label">Bandeira</span>
+                        <select>
+                            <option selected>Visa</option>
+                            <option>Mastercard</option>
+                            <option>Elo</option>
+                        </select>
+                    </label>
+                </div>              
+
+                <a ui-sref="menu.finalizarPedido" class="button button-balanced button-block">Finalizar</a>
+               
+            </div>
+        </div>
+        
+        </form>
+    </ion-content>
+</ion-view>

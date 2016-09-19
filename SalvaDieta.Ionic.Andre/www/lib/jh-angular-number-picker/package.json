@@ -1,0 +1,64 @@
+{
+  "name": "jh-angular-number-picker",
+  "version": "0.0.5",
+  "description": "an angularjs 1.5 component for selecting a number ",
+  "main": "dist/jh-angular-number-picker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hurstindustries/jh-angular-number-picker.git"
+  },
+  "keywords": [
+    "angular",
+    "javascript",
+    "number",
+    "picker",
+    "1.5",
+    "component"
+  ],
+  "author": {
+    "name": "Joshua Hurst",
+    "url": "hurstdustries@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hurstindustries/jh-angular-number-picker/issues"
+  },
+  "homepage": "https://github.com/hurstindustries/jh-angular-number-picker#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1",
+    "rimraf": "^2.5.1",
+    "run-sequence": "^1.1.5"
+  },
+  "gitHead": "c799136b1a4d3a2570495f6cbb1ae01cbcda9364",
+  "_id": "jh-angular-number-picker@0.0.5",
+  "_shasum": "cd1432bbf210b51d32ca369a85fa65d581e6167b",
+  "_from": "jh-angular-number-picker@latest",
+  "_npmVersion": "3.7.2",
+  "_nodeVersion": "4.2.6",
+  "_npmUser": {
+    "name": "hurstindustries",
+    "email": "hurstindustries@gmail.com"
+  },
+  "dist": {
+    "shasum": "cd1432bbf210b51d32ca369a85fa65d581e6167b",
+    "tarball": "https://registry.npmjs.org/jh-angular-number-picker/-/jh-angular-number-picker-0.0.5.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "hurstindustries",
+      "email": "hurstindustries@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/jh-angular-number-picker-0.0.5.tgz_1460648623554_0.7706795861013234"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/jh-angular-number-picker/-/jh-angular-number-picker-0.0.5.tgz"
+}

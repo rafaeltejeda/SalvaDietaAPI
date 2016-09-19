@@ -1,0 +1,78 @@
+<ion-view title="Agendamento do Pedido" id="page8" style="background-color:#78D864;" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div class="">
+             <center><img src="img/salvadieta.svg" width="320"></center>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Horário de Entrega</div>
+            <div class="item item-body">
+                <p id="agendamentoDoPedido-markdown9" style="color:#000000;text-align:center;" class=" ">No máximo
+                    <strong>36hrs</strong> de adiantamento do dia de hoje, sendo entregue somente de Segunda á Sexta das
+                    <strong>11hrs</strong>até as <strong>16hrs</strong> contando o tempo de produção</p>
+                <div class="spacer" style="width: 251px; height: 24px;"></div>
+                <form id="agendamentoDoPedido-form10" class="list ">
+                    <label class="item item-input " id="agendamentoDoPedido-input12" name="data">
+                        <span class="input-label">Data</span>
+                        <input type="date" placeholder="">
+                    </label>
+                    <label class="item item-input " id="agendamentoDoPedido-input13">
+                        <span class="input-label">Horario</span>
+                        <input type="number" placeholder="00:00">
+                    </label>
+                </form>
+            </div>
+        </div>
+        
+       
+        <div class="list card ">
+             <div class="item item-divider">Convênio</div>
+             <div class="item item-body">
+                                   
+                  <ion-checkbox class="checkbox-balanced balanced"
+                                   ng-click="ShowHide()">
+                                   possui convênio?
+                  </ion-checkbox>
+
+                  <div ng-hide = "IsHidden">
+                       <p>Selecione uma academia:</p>  
+                       <div class="list">
+
+                            <label class="item item-input item-select">
+                                <div class="input-label">
+                                </div>
+                                <select>
+                                    <option>Academia 01</option>                               
+                                    <option>Academia 02</option>
+                                </select>
+                            </label>
+
+                       </div>                      
+                   </div>
+
+             </div>
+        </div>            
+       
+
+        <div class="list ">
+            <div class="list card ">
+                <div class="item item-divider">Endereço de Entrega</div>
+                <div class="item item-body">
+                   
+                    <p  style="color:#000000;">
+                        <strong>CEP :</strong></p>
+                    <p  style="color:#000000;">
+                        <strong>Rua :</strong></p>
+                    <p  style="color:#000000;">
+                        <strong>Bairro :</strong></p>
+                    <p  style="color:#000000;">
+                        <strong>Cidade :</strong></p>
+                    <div class="spacer" style="width: 251px; height: 28px;"></div>
+                    <div class=" button-bar ">
+                        <a ui-sref="menu.configuraEs" class=" button button-balanced button-block ">Alterar Endereço</a>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="menu.revisarOPedido" class=" button button-balanced button-block ">Avançar</a>
+        </div>
+    </ion-content>
+</ion-view>
