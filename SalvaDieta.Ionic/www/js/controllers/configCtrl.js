@@ -20,7 +20,7 @@
              if ($rootScope.user == null) 
                  $state.go('login');            
 
-             getByEmail();
+             
         }
 
         function getZip(){
@@ -62,8 +62,7 @@
             }
         }
 
-        function updateUser() {        
-            
+        function updateUser() {
 
             $scope.user.zip = $scope.endereco.cep;
             $scope.user.address = $scope.endereco.logradouro;

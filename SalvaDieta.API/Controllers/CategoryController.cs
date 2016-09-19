@@ -45,7 +45,7 @@ namespace SalvaDieta.API.Controllers
 
         [HttpPost]
         //[Authorize]
-        [Route("api/categories")]
+        [Route("api/category")]
         public Task<HttpResponseMessage> Post([FromBody]dynamic body)
         {
             var command = new CreateCategoryCommand(
@@ -60,7 +60,7 @@ namespace SalvaDieta.API.Controllers
 
         [HttpPut]
         //[Authorize]
-        [Route("api/categories/{id}")]
+        [Route("api/category/{id}")]
         public Task<HttpResponseMessage> Put(int id, [FromBody]dynamic body)
         {
             var command = new UpdateCategoryCommand(
@@ -76,7 +76,7 @@ namespace SalvaDieta.API.Controllers
 
         [HttpDelete]
         //[Authorize]
-        [Route("api/categories/{id}")]
+        [Route("api/category/{id}")]
         public Task<HttpResponseMessage> Delete(int id)
         {
             var category = _service.Delete(id);
