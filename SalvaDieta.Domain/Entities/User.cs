@@ -107,6 +107,47 @@ namespace SalvaDieta.Domain.Entities
         {
             if (!this.UpdateScopeIsValid())
                 return;
+
+            this.Name = name;
+            this.Email = email;
+            this.Password = StringHelper.Encrypt(password); ;
+            this.Address = address;
+            this.Complement = complement;
+            this.Number = number;
+            this.District = district;
+            this.City = city;
+            this.Zip = zip;
+            this.State = state;
+            this.Homephone = homePhone;
+            this.Cellphone = cellPhone;
+            this.Photo = photo;
+            this.Facebook = facebook;
+            this.Twitter = twitter;
+            this.Instagram = instagram;
+            this.YouTube = youTube;
+            this.Role = ERole.Customer;
+        }
+
+        public void UpdateAddress(
+                                   string address,
+                                   string complement,
+                                   string number,
+                                   string district,
+                                   string city,
+                                   string zip,
+                                   string state,
+                                   string homePhone,
+                                   string cellPhone
+                                 )
+        {
+            this.Address = address;
+            this.Complement = complement;
+            this.Number = number;
+            this.District = district;
+            this.City = city;
+            this.Zip = zip;
+            this.State = state;
+            this.Cellphone = cellPhone;
         }
 
       

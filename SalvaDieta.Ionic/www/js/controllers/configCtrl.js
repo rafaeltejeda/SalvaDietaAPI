@@ -5,48 +5,35 @@
     configCtrl.$inject = ['$http', '$scope', '$rootScope', '$timeout', '$ionicLoading', '$state', '$ionicModal', 'userFactory', 'cepFactory' ]
 
     function configCtrl($http, $scope, $rootScope, $timeout, $ionicLoading, $state, $ionicModal, userFactory, cepFactory) {
-
+        
         $scope.user = {};
+        $scope.endereco = {};
+        
         $scope.buscaCEP = getZip;
+
         $scope.upUser = updateUser;
     
         activate()
 
         function activate() {
 
-             if ($rootScope.user == null) {
-                 $state.go('login');
-             }
+             if ($rootScope.user == null) 
+                 $state.go('login');            
 
              getByEmail();
         }
 
         function getZip(){
              
-             var zip = $scope.user.cep;
+             var zip = $scope.endereco.cep;
 
              cepFactory.getCEP(zip)
              .success(success)
              .catch(fail);
 
-             function success(response) {
-
-                      // Setup the loader
-                      $scope.loading = $ionicLoading.show({
-                            content: 'Loading',
-                            template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Carregando seus dados...',
-                            animation: 'fade-in',
-                            showBackdrop: true,
-                            maxWidth: 200,
-                            showDelay: 0
-                      });
-
-                      // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
-                      $timeout(function () {
-                            $scope.user = response;
-                            $scope.address = response.logradouro;                            
-                            $ionicLoading.hide();
-                      }, 2000);
+             function success(result) {
+                      $scope.endereco = result;
+                      $scope.address = result.logradouro;
              }
 
              function fail(error) {
@@ -58,28 +45,13 @@
         }
 
         function getByEmail(){
+             
              userFactory.getByEmail()
              .success(success)
              .catch(fail);
 
              function success(response) {
-
-                      // Setup the loader
-                      $scope.loading = $ionicLoading.show({
-                            content: 'Loading',
-                            template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Carregando seus dados...',
-                            animation: 'fade-in',
-                            showBackdrop: true,
-                            maxWidth: 200,
-                            showDelay: 0
-                      });
-
-                      // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
-                      $timeout(function () {
-                                       
-                            $scope.user = response;
-                            $ionicLoading.hide();
-                      }, 2000);
+                     $scope.user = response;                     
              }
 
              function fail(error) {
@@ -90,14 +62,23 @@
             }
         }
 
-        function updateUser() {
+        function updateUser() {        
+            
+            debugger;
+            $scope.user.zip = $scope.endereco.cep;
+            $scope.user.address = $scope.endereco.logradouro;
+            $scope.user.number = $scope.endereco.numero;
+            $scope.user.complement = $scope.endereco.complemento;
+            $scope.user.district = $scope.endereco.bairro;
+            $scope.user.city = $scope.endereco.cidade;
+            $scope.user.state = $scope.endereco.estado;
 
             userFactory.put($scope.user)
          
             .success(success)
             .catch(fail);            
 
-            function success(response) {
+            function success(response) {                
                 swal("Parabéns", 'Alterado com secesso.', "success");
             }
 

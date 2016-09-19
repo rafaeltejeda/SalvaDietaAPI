@@ -10,7 +10,7 @@
             <div class="item item-divider">Seu perfil</div>
             <div class="item item-body">
                 <div class="list">
-                    <label class="item item-input " id="configuraEs-input11">
+                    <label class="item item-input">
                          <input type="hidden" name="country" ng-model="user.id">
                         <span class="input-label">Nome</span>
                         <input type="text" ng-model="user.name" placeholder="Nome completo">
@@ -49,31 +49,31 @@
                      <div class="list">
                           <label class="item item-input">
                                  <span class="input-label">CEP:</span>
-                                 <input type="text" ng-blur="buscaCEP()" ng-model="user.cep" placeholder="CEP" ui-br-cep-mask>
+                                 <input type="text" ng-blur="buscaCEP()" ng-model="endereco.cep" placeholder="CEP" ui-br-cep-mask>
                           </label>
                           <label class="item item-input">
                                  <span class="input-label">Logradouro:</span>
-                                 <input type="text" ng-model="user.logradouro" ng-disabled="formAddress.$invalid" placeholder="Logradouro">
+                                 <input type="text" ng-model="endereco.logradouro" ng-disabled="formAddress.$invalid" placeholder="Logradouro">
                           </label>
                           <label class="item item-input">
                                  <span class="input-label">Numero:</span>
-                                 <input type="tel" ng-model="user.number" ng-disabled="formAddress.$invalid" placeholder="Numero">
+                                 <input type="tel" ng-model="endereco.numero" ng-disabled="formAddress.$invalid" placeholder="Numero">
                           </label>
                           <label class="item item-input">
                                  <span class="input-label">Complemento:</span>
-                                 <input type="tel" ng-model="user.complement" ng-disabled="formAddress.$invalid" placeholder="Complemento">
+                                 <input type="tel" ng-model="endereco.complement" ng-disabled="formAddress.$invalid" placeholder="Complemento">
                           </label>
                           <label class="item item-input">
                                  <span class="input-label">Bairro:</span>
-                                 <input type="tel" ng-model="user.bairro" ng-disabled="formAddress.$invalid" placeholder="Bairro">
+                                 <input type="tel" ng-model="endereco.bairro" ng-disabled="formAddress.$invalid" placeholder="Bairro">
                           </label>
                           <label class="item item-input">
                                  <span class="input-label">Cidade:</span>
-                                 <input type="text" ng-model="user.cidade" ng-disabled="formAddress.$invalid" placeholder="Cidade">
+                                 <input type="text" ng-model="endereco.cidade" ng-disabled="formAddress.$invalid" placeholder="Cidade">
                           </label>
                           <label class="item item-input">
                                  <span class="input-label">Estado:</span>
-                                 <input type="text" ng-model="user.estado" ng-disabled="formAddress.$invalid" placeholder="Estado">
+                                 <input type="text" ng-model="endereco.estado" ng-disabled="formAddress.$invalid" placeholder="Estado">
                           </label>
                      </div>              
 
