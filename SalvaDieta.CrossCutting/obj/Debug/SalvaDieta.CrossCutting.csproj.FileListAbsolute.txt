@@ -22,6 +22,7 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.CrossCutting\bin\Debu
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.CrossCutting\obj\Debug\SalvaDieta.CrossCutting.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.CrossCutting\obj\Debug\SalvaDieta.CrossCutting.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDieta\SalvaDieta.CrossCutting\obj\Debug\SalvaDieta.CrossCutting.pdb
+C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\obj\Debug\SalvaDieta.CrossCutting.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\bin\Debug\SalvaDieta.CrossCutting.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\bin\Debug\SalvaDieta.CrossCutting.pdb
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\bin\Debug\Microsoft.Practices.ServiceLocation.dll
@@ -43,6 +44,5 @@ C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\bin\D
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\bin\Debug\EntityFramework.xml
-C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\obj\Debug\SalvaDieta.CrossCutting.csprojResolveAssemblyReference.cache
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\obj\Debug\SalvaDieta.CrossCutting.dll
 C:\Users\rafae\Desktop\imobee.com.br\SalvaDietaAPI\SalvaDieta.CrossCutting\obj\Debug\SalvaDieta.CrossCutting.pdb

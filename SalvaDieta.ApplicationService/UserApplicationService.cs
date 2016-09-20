@@ -55,8 +55,7 @@ namespace SalvaDieta.ApplicationService
             var user = _repository.Get(command.Id);
 
             user.UpdateUser(command.Name,
-                            command.Email,
-                            command.Password,
+                            command.Email,                            
                             command.Address,
                             command.Complement,
                             command.Number,

@@ -87,8 +87,7 @@ namespace SalvaDieta.Domain.Entities
 
         public void UpdateUser(
                     string name,
-                    string email,
-                    string password,
+                    string email,                   
                     string address,
                     string complement,
                     string number,
@@ -109,8 +108,7 @@ namespace SalvaDieta.Domain.Entities
                 return;
 
             this.Name = name;
-            this.Email = email;
-            this.Password = StringHelper.Encrypt(password); ;
+            this.Email = email;            
             this.Address = address;
             this.Complement = complement;
             this.Number = number;

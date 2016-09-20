@@ -8,8 +8,8 @@
         'AUTH_USER': 'salvadieta-user',
         'USER_NAME': 'salvadieta-userName',
         'USER_LOGADO': 'ngStorage-user',
-        //'SERVICE_URL': 'http://localhost:55568/'
-        'SERVICE_URL': 'http://salvadieta.azurewebsites.net/'
+        'SERVICE_URL': 'http://localhost:55568/'
+        //'SERVICE_URL': 'http://salvadieta.azurewebsites.net/'
     });    
 
     angular.module('app').run(function ($rootScope, $location, SETTINGS, cartFactory) {

@@ -9,7 +9,6 @@ namespace SalvaDieta.Domain.Commands.UserCommands
                                    int id,
                                    string name,
                                    string email,
-                                   string password,
                                    string address,
                                    string complement,
                                    string number,
@@ -28,8 +27,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
         {
             this.Id = id;
             this.Name = name;
-            this.Email = email;
-            this.Password = password;
+            this.Email = email;            
             this.Address = address;
             this.Complement = complement;
             this.Number = number;
@@ -48,8 +46,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
        
         public int Id { get; private set; }
         public string Name { get; private set; }
-        public string Email { get; private set; }
-        public string Password { get; private set; }
+        public string Email { get; private set; }       
         public string Address { get; private set; }
         public string Complement { get; private set; }
         public string Number { get; private set; }

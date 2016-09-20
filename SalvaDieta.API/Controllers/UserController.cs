@@ -101,8 +101,7 @@ namespace SalvaDieta.API.Controllers
             var command = new UpdateUserCommand(
                 id: id,               
                 name: (string)body.name,
-                email: (string)body.email,
-                password: (string)body.password,
+                email: (string)body.email,               
                 address: (string)body.address,
                 complement: (string)body.complement,
                 number: (string)body.number,
