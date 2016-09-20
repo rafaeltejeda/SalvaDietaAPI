@@ -33,7 +33,13 @@ namespace SalvaDieta.ApplicationService
         public Product Update(UpdateProductCommand command)
         {
             var product = _repository.Get(command.Id);
-            product.UpdateInfo(command.Title, command.Description, command.Weight, command.Price, command.QuantityOnHand, command.CategoryId, command.Image);
+            product.UpdateInfo(command.Title, 
+                               command.Description, 
+                               command.Weight, 
+                               command.Price, 
+                               command.QuantityOnHand, 
+                               command.CategoryId, 
+                               command.Image);
             _repository.Update(product);
 
             if (Commit())

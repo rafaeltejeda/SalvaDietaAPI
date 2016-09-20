@@ -125,7 +125,6 @@ namespace SalvaDieta.Domain.Entities
             this.Twitter = twitter;
             this.Instagram = instagram;
             this.YouTube = youTube;
-            this.Role = ERole.Customer;
         }
       
     }

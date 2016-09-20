@@ -55,7 +55,7 @@ namespace SalvaDieta.Infra.Repositories
 
         public User Get(int id)
         {
-            return _context.Users.Find(id);
+            return _context.Users.Where(x => x.Id.Equals(id)).FirstOrDefault();
         }
 
         public List<User> Get(int skip, int take)

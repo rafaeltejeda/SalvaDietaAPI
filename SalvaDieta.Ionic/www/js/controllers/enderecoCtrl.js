@@ -6,20 +6,9 @@
 
     function enderecoCtrl($scope, $rootScope, $state, $stateParams, $ionicLoading, $timeout, registerFactory, cepFactory) {          
         
-        $scope.user = {
-              id: 0,
-              address: '',
-              complement: '',
-              number: '',
-              district: '',
-              city: '',
-              zip: '',
-              state: '',
-              cellPhone: '',            
-              isAdmin: 0
-        }
+        $scope.user = {};
 
-        $scope.endereco = {}
+        $scope.endereco = {};
 
         $scope.buscaCEP = getZip;
         $scope.updateUser = update;      
@@ -51,9 +40,9 @@
         }
 
         function update() {
-            debugger;
-            $scope.user.id = userID.value;
-            $scope.user.email = $scope.user.email;
+            
+            $scope.user.id = $rootScope.userID;
+            $scope.user.email = $rootScope.email;         
 
             $scope.user.zip = $scope.endereco.cep;
             $scope.user.address = $scope.endereco.logradouro;

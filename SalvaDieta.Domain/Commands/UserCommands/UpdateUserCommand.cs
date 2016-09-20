@@ -43,10 +43,7 @@ namespace SalvaDieta.Domain.Commands.UserCommands
             this.Facebook = facebook;
             this.Twitter = twitter;
             this.Instagram = instagram;
-            this.YouTube = youTube;
-            this.Role = ERole.Customer;
-            this.LastLoginDate = DateTime.Now;
-            this.Joined = DateTime.Now;
+            this.YouTube = youTube;            
         }
        
         public int Id { get; private set; }
@@ -67,8 +64,5 @@ namespace SalvaDieta.Domain.Commands.UserCommands
         public string Twitter { get; private set; }
         public string Instagram { get; private set; }
         public string YouTube { get; private set; }
-        public ERole Role { get; private set; }
-        public DateTime LastLoginDate { get; private set; }
-        public DateTime Joined { get; private set; }
     }
 }
