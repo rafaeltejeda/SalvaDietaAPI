@@ -29,6 +29,11 @@ namespace SalvaDieta.Infra.Repositories
             _context.Entry<User>(user).State = System.Data.Entity.EntityState.Modified;
         }
 
+        public void updatePassword(User user)
+        {
+            _context.Entry<User>(user).State = System.Data.Entity.EntityState.Modified;
+        }
+
         public void Delete(User user)
         {
             _context.Users.Remove(user);

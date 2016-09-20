@@ -14,8 +14,14 @@ namespace SalvaDieta.Domain.Services
 
         User Authenticate(string email, string password);
 
+
+
         User Register(RegisterUserCommand command);
+
         User Update(UpdateUserCommand command);
+
+        User updatePassword(UpdatePasswordCommand command);
+
         User Delete(int id);
     }
 }

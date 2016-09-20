@@ -59,9 +59,7 @@
             function success(response) {                        
                      $rootScope.userID = response.id;
                      $rootScope.email = response.email;
-
-                     console.log($rootScope.userID);          
-                     console.log($rootScope.email);
+                     $rootScope.name = response.name;
                      
                      $state.go('endereco');                        
             }

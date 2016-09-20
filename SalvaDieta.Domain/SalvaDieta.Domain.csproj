@@ -52,6 +52,7 @@
     <Compile Include="Commands\OrderCommands\CreateOrderItemCommand.cs" />
     <Compile Include="Commands\ProductCommands\CreateProductCommand.cs" />
     <Compile Include="Commands\ProductCommands\UpdateProductCommand.cs" />
+    <Compile Include="Commands\UserCommands\UpdatePasswordCommand.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Day.cs" />

@@ -124,6 +124,20 @@ namespace SalvaDieta.Domain.Entities
             this.Instagram = instagram;
             this.YouTube = youTube;
         }
-      
+
+        public void updatePassword(
+                                   string newPassword,
+                                   string confirmeNewPassword,
+                                   string token
+                                  )
+        {
+            if (!this.UpdatePasswordScopeIsValid(newPassword, confirmeNewPassword))
+                return;
+
+            this.Password = StringHelper.Encrypt(confirmeNewPassword);
+        }
+
+    
+
     }
 }

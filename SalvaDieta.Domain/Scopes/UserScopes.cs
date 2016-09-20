@@ -19,6 +19,14 @@ namespace SalvaDieta.Domain.Scopes
             );
         }
 
+        public static bool checkUserScopeIsValid(this User user)
+        {
+            return AssertionConcern.IsSatisfiedBy
+            (
+               AssertionConcern.AssertNotEmpty(user.Email, "O E-mail é obrigatório")
+            );
+        }
+
         public static bool AuthenticateUserScopeIsValid(this User user, string email, string encryptedPassword)
         {
             return AssertionConcern.IsSatisfiedBy
@@ -37,5 +45,13 @@ namespace SalvaDieta.Domain.Scopes
                 AssertionConcern.AssertNotEmpty(user.Email, "O E-mail é obrigatório")
             );
         }
+
+        public static bool UpdatePasswordScopeIsValid(this User user, string newPassword, string confirmeNewPassword)
+        {
+            return AssertionConcern.IsSatisfiedBy
+            (
+                AssertionConcern.AssertMatches(newPassword, confirmeNewPassword, "As senhas não conferem.")
+            );
+        }        
     }
 }

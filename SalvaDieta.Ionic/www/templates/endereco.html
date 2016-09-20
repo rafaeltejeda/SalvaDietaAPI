@@ -43,7 +43,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Numero.$invalid && signupForm.$submitted,'no-errors' : signupForm.Numero.$valid && signupForm.$submitted}">
                 <ion-label >Numero:</ion-label>
-                <input type="text" name="Numero" placeholder="Digite seu Numero" ng-model="endereco.Numero" required>
+                <input type="text" name="Numero" placeholder="Digite seu Numero" ng-model="endereco.numero" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.Numero.$error && signupForm.$submitted" ng-messages="signupForm.Numero.$error">
@@ -59,7 +59,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Complemento.$invalid && signupForm.$submitted,'no-errors' : signupForm.Complemento.$valid && signupForm.$submitted}">
                 <ion-label >Complemento:</ion-label>
-                <input type="text" name="Complemento" placeholder="Digite seu Complemento" ng-model="endereco.Complemento" required>
+                <input type="text" name="Complemento" placeholder="Digite seu Complemento" ng-model="endereco.complement" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.Complemento.$error && signupForm.$submitted" ng-messages="signupForm.Complemento.$error">

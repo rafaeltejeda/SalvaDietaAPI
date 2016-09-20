@@ -42,17 +42,19 @@
         function update() {
             
             $scope.user.id = $rootScope.userID;
+            $scope.user.name = $rootScope.name;
             $scope.user.email = $rootScope.email;         
 
             $scope.user.zip = $scope.endereco.cep;
             $scope.user.address = $scope.endereco.logradouro;
             $scope.user.number = $scope.endereco.numero;
-            $scope.user.complement = $scope.endereco.complemento;
+            $scope.user.complement = $scope.endereco.complement;
             $scope.user.district = $scope.endereco.bairro;
             $scope.user.city = $scope.endereco.cidade;
             $scope.user.state = $scope.endereco.estado;
                     
             registerFactory.put($scope.user)
+            
             .success(success)
             .catch(fail);
 

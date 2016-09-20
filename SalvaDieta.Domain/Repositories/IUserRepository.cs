@@ -14,7 +14,11 @@ namespace SalvaDieta.Domain.Repositories
         User GetByEmail(string email);
 
         void Register(User user);
+
         void Update(User user);
+
+        void updatePassword(User user);
+
         void Delete(User user);
     }
 }

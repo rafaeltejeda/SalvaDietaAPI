@@ -122,6 +122,23 @@ namespace SalvaDieta.API.Controllers
             return CreateResponse(HttpStatusCode.OK, user);
         }
 
+        [HttpPut]
+        //[Authorize]
+        [Route("api/user/password-reset/")]
+        public Task<HttpResponseMessage> Put([FromBody]dynamic body)
+        {
+            var command = new UpdatePasswordCommand(
+                email: (string)body.email,
+                newPassword: (string)body.newPassword,
+                confirmeNewPassword: (string)body.confirmeNewPassword,
+                token: (string)body.token         
+
+                );
+
+            var user = _service.updatePassword(command);
+            return CreateResponse(HttpStatusCode.OK, user);
+        }
+
         [HttpDelete]
         //[Authorize]
         [Route("api/user/{id}")]

@@ -6,7 +6,7 @@ using SalvaDieta.Domain.Services;
 using SalvaDieta.Infra;
 using SalvaDieta.SharedKernel.Events;
 using System.Collections.Generic;
-
+using System;
 
 namespace SalvaDieta.ApplicationService
 {
@@ -79,6 +79,19 @@ namespace SalvaDieta.ApplicationService
 
         }
 
+        public User updatePassword(UpdatePasswordCommand command)
+        {
+            var user = _repository.GetByEmail(command.Email);
+            
+            user.updatePassword(command.NewPassword, command.ConfirmeNewPassword, command.Token);
+            _repository.Update(user);
+
+            if (Commit())
+                return user;
+
+            return null;
+        }
+
         public User Delete(int id)
         {
             var user = _repository.Get(id);
@@ -113,5 +126,6 @@ namespace SalvaDieta.ApplicationService
         {
             return _repository.Get(id);
         }
+       
     }
 }
