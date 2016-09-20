@@ -7,11 +7,11 @@
 
         <form name="signupForm" ng-submit="updateUser(signupForm)" class="list card no-margin" novalidate="">
               
-              <input type="hidden" name="country" value="{{userID}}"> 
+              <input type="hidden" name="country" value="{{userID}}" ng-model="userID"> 
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.CEP.$invalid && signupForm.$submitted,'no-errors' : signupForm.CEP.$valid && signupForm.$submitted}">
                    <ion-label >CEP:</ion-label>
-                   <input type="text" name="CEP" placeholder="Seu CEP" ng-model="user.cep" ng-blur="buscaCEP()" ui-br-cep-mask required>
+                   <input type="text" name="CEP" placeholder="Seu CEP" ng-model="endereco.cep" ng-blur="buscaCEP()" ui-br-cep-mask required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.CEP.$error && signupForm.$submitted" ng-messages="signupForm.CEP.$error">
@@ -27,7 +27,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.endereco.$invalid && signupForm.$submitted,'no-errors' : signupForm.endereco.$valid && signupForm.$submitted}">
                    <ion-label >Endereço:</ion-label>
-                   <input type="text" name="endereco" placeholder="Seu endereço!" ng-model="user.logradouro" required>
+                   <input type="text" name="endereco" placeholder="Seu endereço!" ng-model="endereco.logradouro" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.endereco.$error && signupForm.$submitted" ng-messages="signupForm.endereco.$error">
@@ -43,7 +43,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Numero.$invalid && signupForm.$submitted,'no-errors' : signupForm.Numero.$valid && signupForm.$submitted}">
                 <ion-label >Numero:</ion-label>
-                <input type="text" name="Numero" placeholder="Digite seu Numero" ng-model="user.Numero" required>
+                <input type="text" name="Numero" placeholder="Digite seu Numero" ng-model="endereco.Numero" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.Numero.$error && signupForm.$submitted" ng-messages="signupForm.Numero.$error">
@@ -59,7 +59,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Complemento.$invalid && signupForm.$submitted,'no-errors' : signupForm.Complemento.$valid && signupForm.$submitted}">
                 <ion-label >Complemento:</ion-label>
-                <input type="text" name="Complemento" placeholder="Digite seu Complemento" ng-model="user.Complemento" required>
+                <input type="text" name="Complemento" placeholder="Digite seu Complemento" ng-model="endereco.Complemento" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.Complemento.$error && signupForm.$submitted" ng-messages="signupForm.Complemento.$error">
@@ -75,7 +75,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Bairro.$invalid && signupForm.$submitted,'no-errors' : signupForm.Bairro.$valid && signupForm.$submitted}">
                 <ion-label >Bairro:</ion-label>
-                <input type="text" name="Bairro" placeholder="Digite seu Bairro" ng-model="user.bairro" required>
+                <input type="text" name="Bairro" placeholder="Digite seu Bairro" ng-model="endereco.bairro" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.Bairro.$error && signupForm.$submitted" ng-messages="signupForm.Bairro.$error">
@@ -91,7 +91,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Cidade.$invalid && signupForm.$submitted,'no-errors' : signupForm.Cidade.$valid && signupForm.$submitted}">
                 <ion-label >Cidade:</ion-label>
-                <input type="text" name="Cidade" placeholder="Sua Cidade" ng-model="user.cidade" required>
+                <input type="text" name="Cidade" placeholder="Sua Cidade" ng-model="endereco.cidade" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.Cidade.$error && signupForm.$submitted" ng-messages="signupForm.Cidade.$error">
@@ -107,7 +107,7 @@
 
               <ion-input class="item item-input item-stacked-label" ng-class="{ 'has-errors' : signupForm.Estado.$invalid && signupForm.$submitted,'no-errors' : signupForm.Estado.$valid && signupForm.$submitted}">
                 <ion-label >Estado:</ion-label>
-                <input type="text" name="Estado" placeholder="Seu Estado" ng-model="user.estado" required>
+                <input type="text" name="Estado" placeholder="Seu Estado" ng-model="endereco.estado" required>
               </ion-input>
 
               <div class="error-container padding" ng-show="signupForm.Estado.$error && signupForm.$submitted" ng-messages="signupForm.Estado.$error">

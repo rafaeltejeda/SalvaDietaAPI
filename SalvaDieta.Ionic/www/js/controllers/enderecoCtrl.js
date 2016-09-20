@@ -19,6 +19,8 @@
               isAdmin: 0
         }
 
+        $scope.endereco = {}
+
         $scope.buscaCEP = getZip;
         $scope.updateUser = update;      
 
@@ -29,31 +31,15 @@
 
         function getZip(){
              
-             var zip = $scope.user.cep;
+             var zip = $scope.endereco.cep;
 
              cepFactory.getCEP(zip)
              .success(success)
              .catch(fail);
 
-             function success(response) {
-
-                      // Setup the loader
-                      $scope.loading = $ionicLoading.show({
-                            content: 'Loading',
-                            template: '<p class="item-icon-center"><ion-spinner icon="lines" class="spinner-calm"></ion-spinner></p>Carregando seu endereço...',
-                            animation: 'fade-in',
-                            showBackdrop: true,
-                            maxWidth: 200,
-                            showDelay: 0
-                      });
-
-                      // Set a timeout to clear loader, however you would actually call the $scope.loading.hide(); method whenever everything is ready or loaded.
-                      $timeout(function () {
-                            $scope.user = response;
-                            $scope.address = response.logradouro;
-                            console.log(response);
-                            $ionicLoading.hide();
-                      }, 2000);
+             function success(result) {
+                      $scope.endereco = result;
+                      $scope.address = result.logradouro;
              }
 
              function fail(error) {
@@ -61,11 +47,22 @@
                            swal("Você não tem permissão para ver essa página", 'Requisição não autorizada.', "error");
                       else
                       swal("Sua requisição não pode ser processada", 'o CEP está incorreto.', "error");
-            }
+             }
         }
 
         function update() {
-            
+            debugger;
+            $scope.user.id = userID.value;
+            $scope.user.email = $scope.user.email;
+
+            $scope.user.zip = $scope.endereco.cep;
+            $scope.user.address = $scope.endereco.logradouro;
+            $scope.user.number = $scope.endereco.numero;
+            $scope.user.complement = $scope.endereco.complemento;
+            $scope.user.district = $scope.endereco.bairro;
+            $scope.user.city = $scope.endereco.cidade;
+            $scope.user.state = $scope.endereco.estado;
+                    
             registerFactory.put($scope.user)
             .success(success)
             .catch(fail);

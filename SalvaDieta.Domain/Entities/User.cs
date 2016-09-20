@@ -127,29 +127,6 @@ namespace SalvaDieta.Domain.Entities
             this.YouTube = youTube;
             this.Role = ERole.Customer;
         }
-
-        public void UpdateAddress(
-                                   string address,
-                                   string complement,
-                                   string number,
-                                   string district,
-                                   string city,
-                                   string zip,
-                                   string state,
-                                   string homePhone,
-                                   string cellPhone
-                                 )
-        {
-            this.Address = address;
-            this.Complement = complement;
-            this.Number = number;
-            this.District = district;
-            this.City = city;
-            this.Zip = zip;
-            this.State = state;
-            this.Cellphone = cellPhone;
-        }
-
       
     }
 }

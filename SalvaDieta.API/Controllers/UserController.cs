@@ -44,7 +44,7 @@ namespace SalvaDieta.API.Controllers
             return CreateResponse(HttpStatusCode.OK, users);
         }
 
-        [HttpPost]
+        [HttpGet]
         //[Authorize]
         [Route("api/user/email")]
         public Task<HttpResponseMessage> GetByEmail()
