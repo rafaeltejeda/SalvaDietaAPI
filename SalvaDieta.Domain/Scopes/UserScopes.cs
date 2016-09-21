@@ -46,10 +46,11 @@ namespace SalvaDieta.Domain.Scopes
             );
         }
 
-        public static bool UpdatePasswordScopeIsValid(this User user, string newPassword, string confirmeNewPassword)
+        public static bool UpdatePasswordScopeIsValid(this User user, string password, string currentPassword, string newPassword, string confirmeNewPassword)
         {
             return AssertionConcern.IsSatisfiedBy
             (
+                AssertionConcern.AssertMatches(password, currentPassword, "As senhas não conferem."),
                 AssertionConcern.AssertMatches(newPassword, confirmeNewPassword, "As senhas não conferem.")
             );
         }        

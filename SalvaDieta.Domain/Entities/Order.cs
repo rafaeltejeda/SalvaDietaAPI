@@ -23,6 +23,7 @@ namespace SalvaDieta.Domain.Entities
         public int Id { get; private set; }
         public DateTime Date { get; private set; }
 
+        
         public ICollection<OrderItem> OrderItems
         {
             get { return _orderItems; }

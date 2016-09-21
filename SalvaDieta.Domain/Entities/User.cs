@@ -30,7 +30,7 @@ namespace SalvaDieta.Domain.Entities
         {
             this.Name = name;
             this.Email = email;
-            this.Password = StringHelper.Encrypt(password); ;
+            this.Password = StringHelper.Encrypt(password); 
             this.Address = address;
             this.Complement = complement;
             this.Number = number;
@@ -128,10 +128,15 @@ namespace SalvaDieta.Domain.Entities
         public void updatePassword(
                                    string newPassword,
                                    string confirmeNewPassword,
-                                   string token
+                                   string currentPassword,
+                                   string password
                                   )
         {
-            if (!this.UpdatePasswordScopeIsValid(newPassword, confirmeNewPassword))
+            var encriptPassword = StringHelper.Encrypt(password);
+
+            
+
+            if (!this.UpdatePasswordScopeIsValid(encriptPassword, currentPassword, newPassword, confirmeNewPassword))
                 return;
 
             this.Password = StringHelper.Encrypt(confirmeNewPassword);

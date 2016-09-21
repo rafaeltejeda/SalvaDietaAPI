@@ -83,7 +83,7 @@ namespace SalvaDieta.ApplicationService
         {
             var user = _repository.GetByEmail(command.Email);
             
-            user.updatePassword(command.NewPassword, command.ConfirmeNewPassword, command.Token);
+            user.updatePassword(command.NewPassword, command.ConfirmeNewPassword, user.Password, command.Password);
             _repository.Update(user);
 
             if (Commit())

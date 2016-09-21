@@ -61,6 +61,8 @@ angular.module('app.routes', [])
     }
   })  
 
+  
+
   .state('menu.productsbycategory', {
     url: '/products/:id',
     views: {

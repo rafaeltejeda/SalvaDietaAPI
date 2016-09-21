@@ -11,19 +11,24 @@ namespace SalvaDieta.Domain.Commands.UserCommands
         public UpdatePasswordCommand(
                                       string newPassword,
                                       string confirmeNewPassword,
-                                      string token,
-                                      string email
+                                      string password,
+                                      string email,
+                                      string currentPassword
+
                                     )
         {
             this.NewPassword = newPassword;
             this.ConfirmeNewPassword = confirmeNewPassword;
-            this.Token = Token;
+            this.Password = password;
+            this.CurrentPassword = currentPassword;
             this.Email = email;
         }
 
         public string Email { get; set; }
-        public string Token { get; set; }
+        public string Password { get; set; }     
         public string NewPassword { get; set; }
         public string ConfirmeNewPassword { get; set; }
+        public string CurrentPassword { get; set; }
+        
     }
 }
