@@ -123,7 +123,7 @@ namespace SalvaDieta.API.Controllers
         }
 
         [HttpPut]
-        [Authorize]
+        //Authorize]
         [Route("api/user/password-reset/")]
         public Task<HttpResponseMessage> Put([FromBody]dynamic body)
         {
